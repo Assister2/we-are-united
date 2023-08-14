@@ -149,7 +149,76 @@ function Navbar() {
                                 Бомбардування та обстріли цивільної інфраструктури
                             </Box>
                             <Box>
-                                
+                                <Flex justify={"space-between"}>
+                                    <Box w="93%" h={4} position={"relative"} backgroundColor="white">
+                                        <Box w="84%" h={4} position={"absolute"} backgroundColor="#616992">
+                                        
+                                        </Box>
+                                    </Box>
+                                    <Center w="5%" h={4}>
+                                        160
+                                    </Center>
+                                </Flex>
+                            </Box>
+                        </Box>
+                        <Box >
+                            <Box textAlign={"left"} 
+                                marginTop={3}
+                                marginBottom={3}
+                                fontSize="10px">
+                                Бомбардування та обстріли цивільної інфраструктури
+                            </Box>
+                            <Box>
+                                <Flex justify={"space-between"}>
+                                    <Box w="93%" h={4} position={"relative"} backgroundColor="white">
+                                        <Box w="84%" h={4} position={"absolute"} backgroundColor="#616992">
+                                        
+                                        </Box>
+                                    </Box>
+                                    <Center w="5%" h={4}>
+                                        160
+                                    </Center>
+                                </Flex>
+                            </Box>
+                        </Box>
+                        <Box >
+                            <Box textAlign={"left"} 
+                                marginTop={3}
+                                marginBottom={3}
+                                fontSize="10px">
+                                Бомбардування та обстріли цивільної інфраструктури
+                            </Box>
+                            <Box>
+                                <Flex justify={"space-between"}>
+                                    <Box w="93%" h={4} position={"relative"} backgroundColor="white">
+                                        <Box w="84%" h={4} position={"absolute"} backgroundColor="#616992">
+                                        
+                                        </Box>
+                                    </Box>
+                                    <Center w="5%" h={4}>
+                                        160
+                                    </Center>
+                                </Flex>
+                            </Box>
+                        </Box>
+                        <Box >
+                            <Box textAlign={"left"} 
+                                marginTop={3}
+                                marginBottom={3}
+                                fontSize="10px">
+                                Бомбардування та обстріли цивільної інфраструктури
+                            </Box>
+                            <Box>
+                                <Flex justify={"space-between"}>
+                                    <Box w="93%" h={4} position={"relative"} backgroundColor="white">
+                                        <Box w="84%" h={4} position={"absolute"} backgroundColor="#616992">
+                                        
+                                        </Box>
+                                    </Box>
+                                    <Center w="5%" h={4}>
+                                        160
+                                    </Center>
+                                </Flex>
                             </Box>
                         </Box>
                     </Box>
