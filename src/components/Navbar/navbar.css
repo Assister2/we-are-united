@@ -1,0 +1,8 @@
+.header-icon{
+    width: 64px;
+    height: 58px;
+    background: url("../../assets/site_logo.png"), lightgray 50% / cover no-repeat;
+}
+.language-icon{
+    margin-left: 44px !important;
+}
