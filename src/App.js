@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Fallback from "pages/Fallback";
 import Navbar from "components/Navbar";
 import Banner from "components/Banner";
+import Direction from "components/Direction";
 import routes from "routes";
 
 export default function App() {
@@ -12,6 +13,7 @@ export default function App() {
     <>
       <Navbar />
       <Banner />
+      <Direction />
       {/* <Suspense fallback={<Fallback />}>
         <Routes>
           {routes.map((route) => (
