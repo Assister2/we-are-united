@@ -6,6 +6,7 @@ import Fallback from "pages/Fallback";
 import Navbar from "components/Navbar";
 import Banner from "components/Banner";
 import Direction from "components/Direction";
+import About from "components/About";
 import routes from "routes";
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
       <Navbar />
       <Banner />
       <Direction />
+      <About />
       {/* <Suspense fallback={<Fallback />}>
         <Routes>
           {routes.map((route) => (
