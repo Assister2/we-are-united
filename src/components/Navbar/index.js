@@ -40,7 +40,7 @@ function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const isMobile = useBreakpointValue({ base: true, md: false });
   return (
-    <chakra.header bg="#f2f6fa" w="100%" fontFamily="Montserrat">
+    <chakra.header bg="#f2f6fa" w="100%" maxW="1512px" fontFamily="Montserrat">
       <Container maxW="1512px" minW="320px" py={5} align="center">
         <Flex justify={"space-between"}  maxW="1170px">
           <Center> 
