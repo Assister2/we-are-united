@@ -109,7 +109,6 @@ function About() {
                 </Box>
                 <Box backgroundColor={textBg} paddingTop={8} paddingBottom={8}  px={{lg:'200px', md:'150px', sm:'120px', base:'120px'}}>
                     <Box >
-                        
                         <Box  textAlign={"left"} 
                             color="white"
                             w="100%"
@@ -126,6 +125,31 @@ function About() {
                         </Box>
                     </Box>                                       
                 </Box>
+                <Box  textAlign={"left"} 
+                        marginTop={5}
+                        marginBottom={3}
+                        w="100%"
+                        fontWeight={700}
+                        lineHeight="21px"
+                        letterSpacing="0.2px"
+                        textTransform={"uppercase"}
+                        fontSize={{lg:'24px', md:'22px', sm:'18px', base:'16px'}}>
+                        допомога
+                </Box>
+                <Box backgroundColor={bg} 
+                    paddingTop={8} 
+                    paddingBottom={8}  
+                    px={{lg:'200px', md:'150px', sm:'120px', base:'120px'}}
+                    fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}}>
+                    Якщо ви бажаєте долучитися до нашої команди заповніть форму
+                </Box>
+                <Center>
+                    <Button backgroundColor="orange" alignItems="center" borderRadius={0}>
+                        <Box fontSize="20px" fontWeight={600} lineHeight="30px">
+                            допомогти  
+                        </Box>
+                    </Button>
+                </Center> 
             </Container>
         </chakra.body>
     );

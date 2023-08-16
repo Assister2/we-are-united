@@ -51,29 +51,10 @@ function Direction() {
                                     Дрони, “Очі в Небі”
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
-                                <Button backgroundColor="orange" fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}} alignItems="center" borderRadius={0}>
+                                <Button backgroundColor="orange" fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderRadius={0}>
                                     допомогти
                                 </Button>
-                                <Button backgroundColor="white"  fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
-                                    допомогти
-                                </Button>
-                                </Flex>
-                            </Box>
-                            
-                        </Box>
-                        <Box bg={cardBg}>
-                            <Image src="../../assets/item1.png" alt='item1' />
-                            <Box pl={16} pr={16}>
-                                <Box textAlign={"left"}
-                                    marginBottom={3}
-                                    fontSize={{lg:'32px', md:'28px', base:'24px', sm:'24px'}}>
-                                    Дрони, “Очі в Небі”
-                                </Box>
-                                <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
-                                <Button backgroundColor="orange" fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}} alignItems="center" borderRadius={0}>
-                                    допомогти
-                                </Button>
-                                <Button backgroundColor="white"  fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
+                                <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                     допомогти
                                 </Button>
                                 </Flex>
@@ -89,10 +70,10 @@ function Direction() {
                                     Дрони, “Очі в Небі”
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
-                                <Button backgroundColor="orange" fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}} alignItems="center" borderRadius={0}>
+                                <Button backgroundColor="orange" fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderRadius={0}>
                                     допомогти
                                 </Button>
-                                <Button backgroundColor="white"  fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
+                                <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                     допомогти
                                 </Button>
                                 </Flex>
@@ -108,10 +89,29 @@ function Direction() {
                                     Дрони, “Очі в Небі”
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
-                                <Button backgroundColor="orange" fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}} alignItems="center" borderRadius={0}>
+                                <Button backgroundColor="orange" fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderRadius={0}>
                                     допомогти
                                 </Button>
-                                <Button backgroundColor="white"  fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
+                                <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
+                                    допомогти
+                                </Button>
+                                </Flex>
+                            </Box>
+                            
+                        </Box>
+                        <Box bg={cardBg}>
+                            <Image src="../../assets/item1.png" alt='item1' />
+                            <Box pl={16} pr={16}>
+                                <Box textAlign={"left"}
+                                    marginBottom={3}
+                                    fontSize={{lg:'32px', md:'28px', base:'24px', sm:'24px'}}>
+                                    Дрони, “Очі в Небі”
+                                </Box>
+                                <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
+                                <Button backgroundColor="orange" fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderRadius={0}>
+                                    допомогти
+                                </Button>
+                                <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                     допомогти
                                 </Button>
                                 </Flex>
@@ -132,14 +132,14 @@ function Direction() {
                             <Box pl={12} pr={12}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
-                                    fontSize={{lg:'20px', md:'20px', sm:'14px', base:'12px'}}>
+                                    fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
                                     Назва проекту
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
-                                    <Button backgroundColor="orange" fontSize={{lg:'14px', md:'14px', sm:'12px', base:'10px'}} alignItems="center" borderRadius={0}>
+                                    <Button backgroundColor="orange" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderRadius={0}>
                                         допомогти
                                     </Button>
-                                    <Button backgroundColor="white"  fontSize={{lg:'14px', md:'14px', sm:'12px', base:'10px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
+                                    <Button backgroundColor="white" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                         переглянути
                                     </Button>
                                 </Flex>
@@ -151,14 +151,14 @@ function Direction() {
                             <Box pl={12} pr={12}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
-                                    fontSize={{lg:'20px', md:'20px', sm:'14px', base:'12px'}}>
+                                    fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
                                     Назва проекту
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
-                                    <Button backgroundColor="orange" fontSize={{lg:'14px', md:'14px', sm:'12px', base:'10px'}} alignItems="center" borderRadius={0}>
+                                    <Button backgroundColor="orange" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderRadius={0}>
                                         допомогти
                                     </Button>
-                                    <Button backgroundColor="white"  fontSize={{lg:'14px', md:'14px', sm:'12px', base:'10px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
+                                    <Button backgroundColor="white" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                         переглянути
                                     </Button>
                                 </Flex>
@@ -170,14 +170,14 @@ function Direction() {
                             <Box pl={12} pr={12}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
-                                    fontSize={{lg:'20px', md:'20px', sm:'14px', base:'12px'}}>
+                                    fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
                                     Назва проекту
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
-                                    <Button backgroundColor="orange" fontSize={{lg:'14px', md:'14px', sm:'12px', base:'10px'}} alignItems="center" borderRadius={0}>
+                                    <Button backgroundColor="orange" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderRadius={0}>
                                         допомогти
                                     </Button>
-                                    <Button backgroundColor="white"  fontSize={{lg:'14px', md:'14px', sm:'12px', base:'10px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
+                                    <Button backgroundColor="white" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                         переглянути
                                     </Button>
                                 </Flex>
@@ -198,7 +198,7 @@ function Direction() {
                             <Box pl={12} pr={12}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
-                                    fontSize={{lg:'20px', md:'20px', sm:'14px', base:'12px'}}>
+                                    fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
                                     Назва проекту
                                 </Box>
                                 <Box textAlign={"right"}>
@@ -213,11 +213,11 @@ function Direction() {
                             <Box pl={12} pr={12}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
-                                    fontSize={{lg:'20px', md:'20px', sm:'14px', base:'12px'}}>
+                                    fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
                                     Назва проекту
                                 </Box>
                                 <Box textAlign={"right"}>
-                                    <Button backgroundColor="white" marginBottom={4}  fontSize={{lg:'14px', md:'14px', sm:'12px', base:'10px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
+                                    <Button backgroundColor="white" marginBottom={4} fontSize={{lg:'14px', md:'14px', sm:'12px', base:'10px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                         переглянути
                                     </Button>
                                 </Box>
@@ -228,7 +228,7 @@ function Direction() {
                             <Box pl={12} pr={12}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
-                                    fontSize={{lg:'20px', md:'20px', sm:'14px', base:'12px'}}>
+                                    fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
                                     Назва проекту
                                 </Box>
                                 <Box textAlign={"right"}>

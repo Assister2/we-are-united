@@ -7,7 +7,9 @@ import Navbar from "components/Navbar";
 import Banner from "components/Banner";
 import Direction from "components/Direction";
 import About from "components/About";
+import Footer from "components/Footer";
 import routes from "routes";
+import PayItem from "components/payItem";
 
 export default function App() {
   return (
@@ -16,6 +18,8 @@ export default function App() {
       <Banner />
       <Direction />
       <About />
+      <Footer />
+      {/* <PayItem /> */}
       {/* <Suspense fallback={<Fallback />}>
         <Routes>
           {routes.map((route) => (
