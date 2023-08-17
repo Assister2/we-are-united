@@ -15,18 +15,19 @@ export default function App() {
   return (
     <>
       <Navbar />
-      <Banner />
+      {/* <Banner />
       <Direction />
-      <About />
-      <Footer />
+      <About /> */}
+      
       {/* <PayItem /> */}
-      {/* <Suspense fallback={<Fallback />}>
+      <Suspense fallback={<Fallback />}>
         <Routes>
           {routes.map((route) => (
             <Route key={route.path} path={route.path} element={route.page} />
           ))}
         </Routes>
-      </Suspense> */}
+      </Suspense>
+      <Footer />
     </>
   );
 }

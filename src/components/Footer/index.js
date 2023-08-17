@@ -24,8 +24,8 @@ import {
   space,
   VStack,
 } from "@chakra-ui/react";
-import PayItem from "components/payItem";
-import FullItem from "components/Direction/fullItem";
+// import PayItem from "components/payItem";
+// import FullItem from "components/Direction/fullItem";
 
 function Footer() {
     const bg = useColorModeValue("white.50 ", "white.900");
@@ -85,7 +85,7 @@ function Footer() {
                     {/* <PayItem /> */}
             
             </Container>
-            <FullItem />
+            {/* <FullItem /> */}
         </chakra.footer>
     );
 }

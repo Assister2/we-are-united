@@ -25,6 +25,22 @@ const routes = [
     path: "/about",
     page: <About />,
   },
+  {
+    path: "/directions",
+    page: <Directions />,
+  },
+  {
+    path: "/meeting",
+    page: <Meeting />,
+  },
+  {
+    path: "/contacts",
+    page: <Contacts />,
+  },
+  {
+    path: "/help",
+    page: <Help />,
+  },
 ];
 
 export default routes;

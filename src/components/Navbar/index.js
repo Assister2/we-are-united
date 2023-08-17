@@ -55,28 +55,28 @@ function Navbar() {
                     <MenuButton as={IconButton} icon={<HamburgerIcon />} />
                     <MenuList>
                       <MenuItem>
-                        <Link as={RouterLink} to="/">
+                        <Link as={RouterLink} to="/directions">
                           <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
                             напрямки
                           </Box>
                         </Link>
                       </MenuItem>
                       <MenuItem>
-                        <Link as={RouterLink} to="/">
+                        <Link as={RouterLink} to="/meeting">
                           <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
                             збори
                           </Box>
                         </Link>
                       </MenuItem>
                       <MenuItem>
-                        <Link as={RouterLink} to="/">
+                        <Link as={RouterLink} to="/about">
                           <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
                             про нас
                           </Box>
                         </Link>
                       </MenuItem>
                       <MenuItem>
-                        <Link as={RouterLink} to="/">
+                        <Link as={RouterLink} to="/contacts">
                           <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
                             контакти
                           </Box>
@@ -87,7 +87,7 @@ function Navbar() {
               </Center>
               ):(
               <HStack marginRight="61px" spacing='20px' verticalAlign="middle">
-                <Link as={RouterLink} to="/">
+                <Link as={RouterLink} to="/directions">
                   <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
                     напрямки
                   </Box>

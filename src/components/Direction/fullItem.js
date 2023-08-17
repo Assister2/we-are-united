@@ -84,49 +84,6 @@ function fullItem() {
                     <Image src="../../assets/car.png" alt='safari' />
                 </Box>
             </Flex>
-            {/* <Text textAlign={"left"} 
-                font-size={{lg:'24px', md:'20px', sm:'16px', base:'12px'}}
-                fontWeight={700} lineHeight={"21px"} letterSpacing={"0.2px"}
-                textTransform={"uppercase"} mb={"18px"}>Опис проєкту</Text>
-            <Box position={"relative"} h={"460px"}>
-                <Box textAlign={"left"} w={"631px"} 
-                color={"#000"} left={"0px"} position={"absolute"}
-                fontSize={{lg:'20px', md:'16px', sm:'12px', base:'10px'}}
-                fontWeight={600} lineHeight={"35px"}  letterSpacing={"0.2px"}>
-                Наша мета — зібрати кошти на придбання транспортних
-                засобів для військових, які можна використовувати в
-                різних ситуаціях. Ми сподіваємося змінити ситуацію,
-                забезпечивши покращену мобільність і безпеку для
-                наших військ.
-                </Box>
-                <Box  top={"10px"} right={"0px"} position={"absolute"}>
-                    <Image src="../../assets/car.png" alt='safari' />
-                </Box>
-                <Box py={"51px"} position={"absolute"} top={"180px"} left={"0px"}>
-                    <HStack spacing='20px' verticalAlign="middle"
-                        fontSize={{lg:'24px', md:'20px', sm:'16px', base:'12px'}}
-                        fontWeight={600} lineHeight={"30px"} letterSpacing={"0.2px"}
-                        textTransform={"capitalize"}>
-                        <Box py={"20px"} px={"58px"} borderWidth={1} borderRadius={0}>
-                            <Box textAlign={"center"}>зібрано</Box>
-                            <Box color={"orange"}>
-                                5 500 грн
-                            </Box>
-                        </Box>
-                        <Box py={"20px"} px={"58px"} borderWidth={1} borderRadius={0}>
-                            <Box textAlign={"center"}>Потрібно</Box>
-                            <Box color={"orange"}>
-                            34 000 грн
-                            </Box>
-                        </Box>
-                    </HStack>
-                </Box>
-                <Box position={"absolute"} bottom={0} left={0}>
-                    <Button backgroundColor="orange" fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderRadius={0}>
-                        допомогти
-                    </Button>
-                </Box>
-            </Box> */}
              <Text textAlign={"left"} 
                 font-size={{lg:'24px', md:'20px', sm:'16px', base:'12px'}}
                 fontWeight={700} lineHeight={"21px"} letterSpacing={"0.2px"}
