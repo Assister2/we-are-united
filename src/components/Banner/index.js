@@ -34,7 +34,7 @@ import BannerItem2 from "../bannerItem2";
 import ContactItem from "components/Contact/contactAddress";
 import ContactForm from "components/Contact/contactForm";
 import ContactFund from "components/Contact/contactFund";
-import FullItem from "components/Direction/fullItem";
+
 
 function Navbar() {
     const bg = useColorModeValue("gray.50", "gray.900");
@@ -114,7 +114,7 @@ function Navbar() {
                 {/* <ContactItem /> */}
                 {/* <ContactForm /> */} 
                 {/* <ContactFund /> */}
-                <FullItem />
+                
                 <Box w="100%">
                     <Center 
                         width="70%"

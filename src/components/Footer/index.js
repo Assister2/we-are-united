@@ -25,6 +25,7 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import PayItem from "components/payItem";
+import FullItem from "components/Direction/fullItem";
 
 function Footer() {
     const bg = useColorModeValue("white.50 ", "white.900");
@@ -32,6 +33,7 @@ function Footer() {
     const textBg = useColorModeValue("#001430");
     return (
         <chakra.footer maxWidth="1512px" bg={cardBg} fontFamily={"Montserrat"} color="#001430">
+            
             <Container maxW="1170px"
                         py={10}
                         align="center" >
@@ -81,7 +83,9 @@ function Footer() {
                     
                     {/* </Flex> */}
                     {/* <PayItem /> */}
+            
             </Container>
+            <FullItem />
         </chakra.footer>
     );
 }
