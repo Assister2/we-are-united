@@ -44,7 +44,7 @@ function Navbar() {
       <Container maxW="1512px" minW="320px" py={5} align="center">
         <Flex justify={"space-between"}  maxW="1170px">
           <Center> 
-            <Image height="58px" w="64px" src="../../assets/site_logo.png" alt='site logo' />
+            <Image height="58px" w="64px" src="../../assets/site_logo.png" alt='s ite logo' />
           </Center>
           <Flex justify={"space-between"}>
             <Center marginRight="30px">

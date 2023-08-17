@@ -50,9 +50,9 @@ function fullItem() {
                    забезпечивши покращену мобільність і безпеку для
                     наших військ.
                 </Box>
-                {/* <Box position={"absolute"} top={"10px"} right={"0px"}>
-                    <Image src="../../assets/car.png" alt='safari'> </Image>
-                </Box> */}
+                <Box position={"absolute"} top={"10px"} right={"0px"}>
+                    <Image src="../../assets/car.png" alt='safari' />
+                </Box>
             </Box>
         </Box>
     );
