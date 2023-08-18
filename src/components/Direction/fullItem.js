@@ -25,7 +25,7 @@ import {
   space,
 } from "@chakra-ui/react";
 
-function fullItem() {
+function FullItem() {
     
     const cardBg = useColorModeValue("gray.50", "gray.900");
 
@@ -134,4 +134,4 @@ function fullItem() {
     );
 }
 
-export default fullItem;          
+export default FullItem;          

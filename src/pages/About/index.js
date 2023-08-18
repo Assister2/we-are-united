@@ -1,22 +1,16 @@
 import React from "react";
 
 import { Container, Heading, Text, VStack } from "@chakra-ui/react";
-
+import AboutItem1 from "components/About/item";
+import AboutItem2 from "components/About/item2";
+import AboutItem3 from "components/About/item3";
+import AboutItem4 from "components/About/item4";
+import item from "components/Direction/item";
 function About() {
+
   return (
-    <Container maxW="container.md" py={4}>
-      <VStack align="start" spacing={4}>
-        <Heading>About</Heading>
-        <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </Text>
-      </VStack>
+    <Container maxW="1512px" py={4}>
+      <AboutItem4 />
     </Container>
   );
 }

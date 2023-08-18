@@ -27,25 +27,15 @@ import BannerItem from "components/bannerItem";
 import Direction from "components/Direction";
 import About from "components/About";
 import Banner from "components/Banner"
-import ContactForm from "components/Contact/contactForm";
-import ContactAddress from "components/Contact/contactAddress";
-import ContactFund from "components/Contact/contactFund";
-function Contacts() {
+import fullItem from "components/Direction/fullItem";
+import PayItem from "components/payItem";
+
+function Payment() {
   return (
     <Container maxW="1512px" px={"171px"} py={"90px"}>
-        <Box position={"relative"} height={"1004px"}>
-            <Box top={0} left={0} position={"absolute"}>
-                <ContactAddress />
-            </Box>
-            <Box top={0} right={0} position={"absolute"}>
-                <ContactForm />
-            </Box>
-        </Box>
-        <Center>
-            <ContactFund />
-        </Center>
+    <PayItem />
     </Container>
   );
 }
 
-export default Contacts;
+export default Payment;

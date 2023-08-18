@@ -23,7 +23,7 @@ export default function App() {
       <Suspense fallback={<Fallback />}>
         <Routes>
           {routes.map((route) => (
-            <Route key={route.path} path={route.path} element={route.page} />
+            <Route key={route.path} path={route.path} element={route.page} index={route.index}/>
           ))}
         </Routes>
       </Suspense>

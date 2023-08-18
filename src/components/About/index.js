@@ -1,4 +1,5 @@
 import React from "react";
+import { Link as RouterLink } from "react-router-dom";
 import {
   Container,
   HStack,
@@ -90,21 +91,29 @@ function About() {
                         напрямки нашої діяльності
                     </Center>
                     <SimpleGrid columns={2} spacing={8} fontWeight={600} lineHeight="30px">
+                        <Link as={RouterLink} to="/about"> 
                         <Box borderWidth={1} py={{lg:'34px', md:'30px', sm:'24px', base:'20px'}}>
                             <Center>Гуманітарна допомога</Center>
                             <Center> населенню України</Center>
                         </Box>
+                        </Link>
+                        <Link as={RouterLink} to="/about">
                         <Box borderWidth={1} py={{lg:'47px', md:'40px', sm:'32px', base:'28px'}}>
                             <Center >Допомога армії</Center>
                         </Box>
+                        </Link>
+                        <Link as={RouterLink} to="/about"> 
                         <Box borderWidth={1} py={{lg:'34px', md:'30px', sm:'24px', base:'20px'}}>
                             <Center>Допомога у розвитку</Center>
                             <Center>бізнес-проектів</Center>
                         </Box>
+                        </Link>
+                        <Link as={RouterLink} to="/about"> 
                         <Box borderWidth={1} py={{lg:'34px', md:'30px', sm:'24px', base:'20px'}}>
                             <Center >Допомога у відбудуванні</Center>
                             <Center>втраченого житла</Center>
                         </Box>
+                        </Link>
                     </SimpleGrid>
                 </Box>
                 <Box backgroundColor={textBg} paddingTop={8} paddingBottom={8}  px={{lg:'200px', md:'150px', sm:'120px', base:'120px'}}>

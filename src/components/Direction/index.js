@@ -24,6 +24,8 @@ import {
   SimpleGrid,
   space,
 } from "@chakra-ui/react";
+import PayItem from "components/payItem";
+import fullItem from "./fullItem";
 
 function Direction() {
     const bg = useColorModeValue("white.50 ", "white.900");
@@ -44,6 +46,7 @@ function Direction() {
                      <SimpleGrid columns={2} spacing={8}>
                         <Box bg={cardBg}>
                             <Image src="../../assets/item1.png" alt='item1' />
+                            
                             <Box pl={16} pr={16}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
@@ -51,12 +54,16 @@ function Direction() {
                                     Дрони, “Очі в Небі”
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
+                                <Link as={RouterLink} to="/payment">
                                 <Button backgroundColor="orange" fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderRadius={0}>
                                     допомогти
                                 </Button>
+                                </Link>
+                                <Link as={RouterLink} to="/detail">
                                 <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                     допомогти
                                 </Button>
+                                </Link>
                                 </Flex>
                             </Box>
                             

@@ -6,7 +6,9 @@ const NotFound = lazy(() => import("pages/NotFound"));
 const Directions = lazy(() => import("pages/Directions"));
 const Meeting = lazy(() => import("pages/Meeting"));
 const Contacts = lazy(() =>import("pages/Contacts"));
-const Help = lazy(() => import("pages/Help"))
+const Help = lazy(() => import("pages/Help"));
+const Payment = lazy(() => import("pages/Payment"));
+const Detail = lazy(() => import("pages/Detail"));
 
 const routes = [
   {
@@ -40,6 +42,14 @@ const routes = [
   {
     path: "/help",
     page: <Help />,
+  },
+  {
+    path: "/payment",
+    page: <Payment />,
+  },
+  {
+    path: "/detail",
+    page: <Detail />,
   },
 ];
 
