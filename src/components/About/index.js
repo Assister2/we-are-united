@@ -20,13 +20,27 @@ import {
   MenuItemOption,
   GridItem,
   Center,
+  VStack,
   Text,
   SimpleGrid,
+  Input,
   space,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  useDisclosure,
+  ModalCloseButton,
 } from "@chakra-ui/react";
+import ContactForm from "components/Contact/contactForm";
+import { ClassNames } from "@emotion/react";
+
 function About() {
     const bg = useColorModeValue("white.50 ", "white.900");
     const cardBg = useColorModeValue("gray.50", "gray.900");
+    const { isOpen, onOpen, onClose } = useDisclosure()
     const textBg = useColorModeValue("#001430");
     return (
         <chakra.body maxWidth="1512px" fontFamily={"Montserrat"} color="#001430">
@@ -153,12 +167,58 @@ function About() {
                     Якщо ви бажаєте долучитися до нашої команди заповніть форму
                 </Box>
                 <Center>
-                    <Button backgroundColor="orange" alignItems="center" borderRadius={0}>
+                    <Button backgroundColor="orange" alignItems="center" borderRadius={0} onClick={onOpen}>
                         <Box fontSize="20px" fontWeight={600} lineHeight="30px">
                             допомогти  
                         </Box>
                     </Button>
                 </Center> 
+                <Modal blockScrollOnMount={false} loseOnOverlayClick={false}
+                        scrollBehavior="offside" backgroundColor={"white"}
+                        isOpen={isOpen} onClose={onClose} size={"3xl"} borderWidth={1} borderRadius={0}>
+                    <ModalOverlay backdropBlur='2px' />
+                    <ModalContent height={"1006px"}>
+                        <ModalCloseButton  textAlign={"right"}/>
+                        <ModalHeader fontFamily={"Rutenia"}>
+                            <Center px={"78px"} mt={"78px"} mb={"18px"} fontSize={{lg:'30px', md:'24px', sm:'20px', base:'16px'}}
+                                    fontFamily={"Rutenia"} fontWeight={400} lineHeight={10} textTransform={"capitalize"}>
+                                Щоб разом будувати майбутнє</Center>
+                            <Center px={"78px"} mb={"48px"} mt={"18px"} fontSize={{lg:'30px', md:'24px', sm:'20px', base:'16px'}}
+                                fontFamily={"Rutenia"} fontWeight={400} lineHeight={10} textTransform={"capitalize"}>
+                                варто бути єдиними у спільній справі</Center>
+                        </ModalHeader>
+                        <Box  px={"68px"} my={"20px"} >
+                            <VStack textAlign={"right"} gap={"20px"}>
+                                <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder="ім’я"  />
+                                <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder="номер телефону"  />
+                                <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder="Email"  />
+                                <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder="У якому місті проживаєте?"  />
+                                <Input pt={"33px"} pb={"134px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder="Чим би могли і хотіли допомагати?"  />    
+                            </VStack>
+                        </Box>
+                        <Center py={"20px"}>
+                            <Button backgroundColor="orange" alignItems="center" borderRadius={0}>
+                                <Box fontSize="20px" fontWeight={600} lineHeight="30px">
+                                    надіслати  
+                                </Box>
+                            </Button>
+                        </Center> 
+                    
+                    
+                    {/* <ModalBody>
+                        <ContactForm />
+                    </ModalBody> */}
+                    
+                    {/* <ModalFooter>
+                        <Button colorScheme='blue' mr={3} onClick={onClose}>
+                        Close
+                        </Button>
+                        <Button variant='ghost'>Secondary Action</Button>
+                    </ModalFooter> */}
+                    {/* <ContactForm /> */}
+                    </ModalContent>
+                </Modal>
+            
             </Container>
         </chakra.body>
     );
