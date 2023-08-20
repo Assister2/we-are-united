@@ -10,6 +10,7 @@ import About from "components/About";
 import Footer from "components/Footer";
 import routes from "routes";
 import PayItem from "components/payItem";
+import axios from "axios";
 
 export default function App() {
   return (
@@ -18,7 +19,7 @@ export default function App() {
       {/* <Banner />
       <Direction />
       <About /> */}
-      
+      {/* <Main /> */}
       {/* <PayItem /> */}
       <Suspense fallback={<Fallback />}>
         <Routes>

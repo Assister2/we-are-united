@@ -60,13 +60,15 @@ function BannerItem(){
                                     поселень та осель сімей, які втратили дах над головою
                                     від рук російського агресора. 
                                 </Box>
-                                <Box textAlign={"left" }>
-                                    <Button backgroundColor="orange" alignItems="center" borderRadius={0}>
-                                        <Box fontSize="20px" fontWeight={600} lineHeight="30px">
-                                            допомогти  
-                                        </Box>
-                                    </Button>
-                                </Box>
+                                <Link as={RouterLink} to="/payment">
+                                    <Box textAlign={"left" }>
+                                        <Button backgroundColor="orange" alignItems="center" borderRadius={0}>
+                                            <Box fontSize="20px" fontWeight={600} lineHeight="30px">
+                                                допомогти  
+                                            </Box>
+                                        </Button>
+                                    </Box>
+                                </Link>
                                 
                         </Box>
                         </Box>

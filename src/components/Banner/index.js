@@ -1,5 +1,6 @@
-import React from "react";
+import React ,{ useEffect, useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
+import axios from "axios";
 import {
   Container,
   HStack,
@@ -35,10 +36,14 @@ import ContactItem from "components/Contact/contactAddress";
 import ContactForm from "components/Contact/contactForm";
 import ContactFund from "components/Contact/contactFund";
 
+const YOUR_PAT = 'pattgeELcYcjvzwSG.a95aa8b9b1ec83e15e67f5bdaea6edf9d96c024618f60391a1347de366acc10c';
+const BASE_ID = 'applgD9CzrAvFqdsw';
+const TABLE_NAME = 'injured';
 
 function Navbar() {
     const bg = useColorModeValue("gray.50", "gray.900");
     const isMobile = useBreakpointValue({ base: true, md: false });
+    const [injuredData, setInjuredData] = useState([]);
     const breakpoints = {
         sm: '320px',
         md: '768px',
@@ -48,6 +53,22 @@ function Navbar() {
       }
     //   style={{position:'absolute'}}
     const theme = extendTheme({ breakpoints })
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await axios.get(`https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`, {
+            headers: {
+              'Authorization': `Bearer ${YOUR_PAT}`
+            }
+          });
+            // console.log(response.data);
+            setInjuredData(response.data);
+          } catch (error) {
+            console.error(error);
+          }
+        };
+        fetchData();
+      }, []);
     return (
         <chakra.body bg="#f2f6fa" w="100%" maxW="1512px" fontFamily={"Montserrat"} color="#001430">
             <Container maxW="1512px"

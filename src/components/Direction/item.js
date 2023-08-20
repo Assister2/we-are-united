@@ -25,29 +25,36 @@ import {
   space,
 } from "@chakra-ui/react";
 
-function item() {
+function DirectionItem({item}) {
     
     const cardBg = useColorModeValue("gray.50", "gray.900");
     return (
         <Box bg={cardBg}>
-            <Image src="../../assets/item1.png" alt='item1' />
+            <Box width={"100%"} height={"300px"}>
+                <Image src={item.Image} alt={item.Name} />
+            </Box>
             <Box pl={16} pr={16}>
                 <Box textAlign={"left"}
                     marginBottom={3}
                     fontSize={{lg:'32px', md:'28px', base:'24px', sm:'24px'}}>
-                    Дрони, “Очі в Небі”
+                    {item.UkranianName}
                 </Box>
                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
-                <Button backgroundColor="orange" fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}} alignItems="center" borderRadius={0}>
+                <Link as={RouterLink} to="/payment">
+                <Button backgroundColor="orange" fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderRadius={0}>
                     допомогти
                 </Button>
-                <Button backgroundColor="white"  fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
+                </Link>
+                <Link as={RouterLink} to="/detail">
+                <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                     допомогти
                 </Button>
+                </Link>
                 </Flex>
             </Box>
+            
         </Box>
     );
 }
 
-export default item;
+export default DirectionItem;

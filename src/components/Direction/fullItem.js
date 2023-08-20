@@ -1,5 +1,6 @@
-import React from "react";
+import React ,{ useEffect, useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
+import axios from "axios";
 import {
   Container,
   HStack,
@@ -25,10 +26,31 @@ import {
   space,
 } from "@chakra-ui/react";
 
+
+const YOUR_PAT = 'pattgeELcYcjvzwSG.a95aa8b9b1ec83e15e67f5bdaea6edf9d96c024618f60391a1347de366acc10c';
+const BASE_ID = 'applgD9CzrAvFqdsw';
+const TABLE_NAME = 'items';
+
 function FullItem() {
     
     const cardBg = useColorModeValue("gray.50", "gray.900");
-
+    const [detailData, setDetailData] = useState([]);
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await axios.get(`https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}`, {
+            headers: {
+              'Authorization': `Bearer ${YOUR_PAT}`
+            }
+          });
+            // console.log(response.data);
+            setDetailData(response.data);
+          } catch (error) {
+            console.error(error);
+          }
+        };
+        fetchData();
+      }, []);
     return (
         <Box width={"100%"} px={"171px"} color={"#001430"} bgColor={"#fff"}>
             <Center py={"101px"} position={"relative"}>

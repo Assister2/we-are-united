@@ -53,6 +53,7 @@ function About() {
                         w="100%"
                         fontWeight={700}
                         lineHeight="21px"
+                        id="about"
                         letterSpacing="0.2px"
                         textTransform={"uppercase"}
                         fontSize={{lg:'24px', md:'22px', sm:'18px', base:'16px'}}>
@@ -105,24 +106,24 @@ function About() {
                         напрямки нашої діяльності
                     </Center>
                     <SimpleGrid columns={2} spacing={8} fontWeight={600} lineHeight="30px">
-                        <Link as={RouterLink} to="/about"> 
+                        <Link as={RouterLink} to="/about/1"> 
                         <Box borderWidth={1} py={{lg:'34px', md:'30px', sm:'24px', base:'20px'}}>
                             <Center>Гуманітарна допомога</Center>
                             <Center> населенню України</Center>
                         </Box>
                         </Link>
-                        <Link as={RouterLink} to="/about">
+                        <Link as={RouterLink} to="/about/2">
                         <Box borderWidth={1} py={{lg:'47px', md:'40px', sm:'32px', base:'28px'}}>
                             <Center >Допомога армії</Center>
                         </Box>
                         </Link>
-                        <Link as={RouterLink} to="/about"> 
+                        <Link as={RouterLink} to="/about/3"> 
                         <Box borderWidth={1} py={{lg:'34px', md:'30px', sm:'24px', base:'20px'}}>
                             <Center>Допомога у розвитку</Center>
                             <Center>бізнес-проектів</Center>
                         </Box>
                         </Link>
-                        <Link as={RouterLink} to="/about"> 
+                        <Link as={RouterLink} to="/about/4"> 
                         <Box borderWidth={1} py={{lg:'34px', md:'30px', sm:'24px', base:'20px'}}>
                             <Center >Допомога у відбудуванні</Center>
                             <Center>втраченого житла</Center>
@@ -169,7 +170,7 @@ function About() {
                 <Center>
                     <Button backgroundColor="orange" alignItems="center" borderRadius={0} onClick={onOpen}>
                         <Box fontSize="20px" fontWeight={600} lineHeight="30px">
-                            допомогти  
+                            допомогти
                         </Box>
                     </Button>
                 </Center> 

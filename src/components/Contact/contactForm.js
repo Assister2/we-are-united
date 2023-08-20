@@ -40,8 +40,8 @@ function ContactForm( color, type) {
                 </svg>
             </Box>
             <Center px={"78px"} mt={"78px"} mb={"18px"} fontSize={{lg:'30px', md:'24px', sm:'20px', base:'16px'}}
-                                    fontFamily={"Rutenia"} fontWeight={400} lineHeight={10} textTransform={"capitalize"}>
-                                Щоб разом будувати майбутнє</Center>
+                fontFamily={"Rutenia"} fontWeight={400} lineHeight={10} textTransform={"capitalize"}>
+                Щоб разом будувати майбутнє</Center>
             <Center px={"78px"} mb={"48px"} mt={"18px"} fontSize={{lg:'30px', md:'24px', sm:'20px', base:'16px'}}
                 fontFamily={"Rutenia"} fontWeight={400} lineHeight={10} textTransform={"capitalize"}>
                 варто бути єдиними у спільній справі</Center>

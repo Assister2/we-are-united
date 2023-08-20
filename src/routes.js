@@ -28,6 +28,10 @@ const routes = [
     page: <About />,
   },
   {
+    path: "/about/:id",
+    page: <About id/>,
+  },
+  {
     path: "/directions",
     page: <Directions />,
   },
