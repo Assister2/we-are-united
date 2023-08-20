@@ -32,6 +32,7 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { HamburgerIcon, ChevronDownIcon } from "@chakra-ui/icons";
+import {useTranslation} from "react-i18next";
 import "./navbar.css";
 import ColorModeToggle from "components/ColorModeToggle";
 import Logo from "assets/react-logo.svg";
@@ -41,11 +42,12 @@ function Navbar() {
   const bg = useColorModeValue("gray.50", "gray.900");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const isMobile = useBreakpointValue({ base: true, md: false });
-  
+  const {t, i18n} = useTranslation('common');
   const [selectedItem, setSelectedItem] = useState(null);
 
   const handleMenuItemClick = (item) => {
-    setSelectedItem(item);
+    i18n.changeLanguage(item);
+    setSelectedItem(item.toUpperCase());
   };
   return (
     <chakra.header bg="#f2f6fa" w="100%" maxW="1512px" fontFamily="Montserrat">
@@ -75,7 +77,7 @@ function Navbar() {
                         <HashLink to="/directions#direction" 
                         scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}>
                           <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
-                            напрямки
+                            {t('напрямки')}
                           </Box>
                         </HashLink>
                       </MenuItem>
@@ -83,7 +85,7 @@ function Navbar() {
                         <HashLink to="/directions#meeting" 
                         scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}>
                           <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
-                            ЗБОРИ
+                            {t('ЗБОРИ')}
                           </Box>
                         </HashLink>
                       </MenuItem>
@@ -91,14 +93,14 @@ function Navbar() {
                         <HashLink to="/directions#about" 
                         scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}>
                           <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
-                          ПРОНАС
+                            {t('ПРО НАС')}
                           </Box>
                         </HashLink>
                       </MenuItem>
                       <MenuItem>
                         <Link as={RouterLink} to="/contacts">
                           <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
-                            контакти
+                            {t('контакти')}
                           </Box>
                         </Link>
                       </MenuItem>
@@ -117,25 +119,25 @@ function Navbar() {
                 <HashLink to="/directions#direction" 
                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}>
                   <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
-                    напрямки
+                    {t('напрямки')}
                   </Box>
                 </HashLink>
                 <HashLink to="/directions#meeting" 
                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}>
                   <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
-                    ЗБОРИ
+                    {t('ЗБОРИ')}
                   </Box>
                 </HashLink>
                 <HashLink to="/directions#about" 
                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}>
                   <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
-                  ПРОНАС
+                    {t('ПРО НАС')}
                   </Box>
                 </HashLink>
                 <Link as={RouterLink}
                  to="/contacts">
                   <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
-                    контакти
+                    {t('контакти')}
                   </Box>
                 </Link>
               </HStack>) } 
@@ -145,7 +147,7 @@ function Navbar() {
                 <Link as={RouterLink} to="/payment">
                   <Button backgroundColor="orange" alignItems="center" borderRadius={0}>
                     <Box fontSize="20px" fontWeight={600} lineHeight="30px">
-                      допомогти  
+                      {t('допомогти')}
                     </Box>
                   </Button>
                 </Link>
@@ -161,12 +163,12 @@ function Navbar() {
                     </Flex>
                   </MenuButton>
                   <MenuList  style={{ width: "100px", minWidth: '100px' }}>
-                    <MenuItem onClick={() => handleMenuItemClick("EN")} w={"inherit"}>EN</MenuItem>
-                    <MenuItem onClick={() => handleMenuItemClick("UA")} w={"inherit"}>UA</MenuItem>
-                    <MenuItem onClick={() => handleMenuItemClick("FR")} w={"inherit"}>FR</MenuItem>
-                    <MenuItem onClick={() => handleMenuItemClick("ES")} w={"inherit"}>ES</MenuItem>
-                    <MenuItem onClick={() => handleMenuItemClick("DE")} w={"inherit"}>DE</MenuItem>
-                    <MenuItem onClick={() => handleMenuItemClick("IT")} w={"inherit"}>IT</MenuItem>
+                    <MenuItem onClick={() => handleMenuItemClick("en")} w={"inherit"}>EN</MenuItem>
+                    <MenuItem onClick={() => handleMenuItemClick("ua")} w={"inherit"}>UA</MenuItem>
+                    <MenuItem onClick={() => handleMenuItemClick("fr")} w={"inherit"}>FR</MenuItem>
+                    <MenuItem onClick={() => handleMenuItemClick("es")} w={"inherit"}>ES</MenuItem>
+                    <MenuItem onClick={() => handleMenuItemClick("de")} w={"inherit"}>DE</MenuItem>
+                    <MenuItem onClick={() => handleMenuItemClick("it")} w={"inherit"}>IT</MenuItem>
                   </MenuList>
                 </Menu>
               </Flex>
@@ -175,7 +177,7 @@ function Navbar() {
                 <Link as={RouterLink} to="/payment">
                   <Button backgroundColor="orange" alignItems="center" borderRadius={0}>
                     <Box fontSize="20px" fontWeight={600} lineHeight="30px">
-                      допомогти
+                      {t('допомогти')}
                     </Box>
                   </Button>
                 </Link>
@@ -191,12 +193,12 @@ function Navbar() {
                     </Flex>
                   </MenuButton>
                   <MenuList  style={{ width: "100px", minWidth: '100px' }}>
-                    <MenuItem onClick={() => handleMenuItemClick("EN")} w={"inherit"}>EN</MenuItem>
-                    <MenuItem onClick={() => handleMenuItemClick("UA")} w={"inherit"}>UA</MenuItem>
-                    <MenuItem onClick={() => handleMenuItemClick("FR")} w={"inherit"}>FR</MenuItem>
-                    <MenuItem onClick={() => handleMenuItemClick("ES")} w={"inherit"}>ES</MenuItem>
-                    <MenuItem onClick={() => handleMenuItemClick("DE")} w={"inherit"}>DE</MenuItem>
-                    <MenuItem onClick={() => handleMenuItemClick("IT")} w={"inherit"}>IT</MenuItem>
+                    <MenuItem onClick={() => handleMenuItemClick("en")} w={"inherit"}>EN</MenuItem>
+                    <MenuItem onClick={() => handleMenuItemClick("ua")} w={"inherit"}>UA</MenuItem>
+                    <MenuItem onClick={() => handleMenuItemClick("fr")} w={"inherit"}>FR</MenuItem>
+                    <MenuItem onClick={() => handleMenuItemClick("es")} w={"inherit"}>ES</MenuItem>
+                    <MenuItem onClick={() => handleMenuItemClick("de")} w={"inherit"}>DE</MenuItem>
+                    <MenuItem onClick={() => handleMenuItemClick("it")} w={"inherit"}>IT</MenuItem>
                   </MenuList>
                 </Menu>
               </Flex>
