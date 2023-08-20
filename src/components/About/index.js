@@ -36,12 +36,15 @@ import {
 } from "@chakra-ui/react";
 import ContactForm from "components/Contact/contactForm";
 import { ClassNames } from "@emotion/react";
+import {useTranslation} from "react-i18next";
 
 function About() {
     const bg = useColorModeValue("white.50 ", "white.900");
     const cardBg = useColorModeValue("gray.50", "gray.900");
     const { isOpen, onOpen, onClose } = useDisclosure()
     const textBg = useColorModeValue("#001430");
+    const {t, i18n} = useTranslation('common');
+
     return (
         <chakra.body maxWidth="1512px" fontFamily={"Montserrat"} color="#001430">
             <Container maxW="1170px"
@@ -57,7 +60,7 @@ function About() {
                         letterSpacing="0.2px"
                         textTransform={"uppercase"}
                         fontSize={{lg:'24px', md:'22px', sm:'18px', base:'16px'}}>
-                        про нас
+                        {t('про нас')}
                 </Box>
                 <Box backgroundColor={textBg} paddingTop={8} paddingBottom={8}  px={{lg:'200px', md:'150px', sm:'120px', base:'120px'}}>
                     <Box >
@@ -69,7 +72,8 @@ function About() {
                                 lineHeight="30px"
                                 letterSpacing="0.2px"
                                 fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}}>
-                                "Хто ми"
+                                {t("'Хто ми'")}
+                                {/* "Хто ми" */}
                             </Box>
                             <Box  textAlign={"left"} 
                                 color="white"
@@ -78,9 +82,7 @@ function About() {
                                 lineHeight="30px"
                                 letterSpacing="0.2px"
                                 fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}}>
-                                Ми команда активних українців,  які мають спільну мету  -  допомога 
-                                українському народу у відбудові українських поселень та осель сімей,
-                                які втратили дах над головою від рук російського агресора.
+                                {t("Ми команда активних українців,  які мають спільну мету  -  допомога українському народу у відбудові українських поселень та осель сімей,які втратили дах над головою від рук російського агресора.")}
                             </Box>
                         </Box>
                         <Box  textAlign={"left"} 
@@ -91,9 +93,7 @@ function About() {
                             letterSpacing="0.2px"
                             fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}}
                             textTransform={"capitalize"}>
-                            Ми Єдині - офіційно зареєстрована організація, яка готова до співпраці
-                            з міжнародними фондами та небайдужими людьми, яких об'єднує 
-                            спільність та добра воля. Будуємо спільне майбутнє разом.
+                            {t("Ми Єдині - офіційно зареєстрована організація, яка готова до співпраці з міжнародними фондами та небайдужими людьми, яких об'єднує спільність та добра воля. Будуємо спільне майбутнє разом.")}
                         </Box>
                     </Box>                                       
                 </Box>
@@ -103,30 +103,30 @@ function About() {
                     px={{lg:'200px', md:'150px', sm:'120px', base:'120px'}}
                     fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}}>
                     <Center paddingBottom={5} fontWeight={700} lineHeight="21px" letterSpacing="0.2px" textTransform={"uppercase"} >
-                        напрямки нашої діяльності
+                        {t('напрямки нашої діяльності')}
                     </Center>
                     <SimpleGrid columns={2} spacing={8} fontWeight={600} lineHeight="30px">
                         <Link as={RouterLink} to="/about/1"> 
                         <Box borderWidth={1} py={{lg:'34px', md:'30px', sm:'24px', base:'20px'}}>
-                            <Center>Гуманітарна допомога</Center>
-                            <Center> населенню України</Center>
+                            <Center>{t('Гуманітарна допомога')}</Center>
+                            <Center> {t('населенню України')}</Center>
                         </Box>
                         </Link>
                         <Link as={RouterLink} to="/about/2">
                         <Box borderWidth={1} py={{lg:'47px', md:'40px', sm:'32px', base:'28px'}}>
-                            <Center >Допомога армії</Center>
+                            <Center >{t('Допомога армії')}</Center>
                         </Box>
                         </Link>
                         <Link as={RouterLink} to="/about/3"> 
                         <Box borderWidth={1} py={{lg:'34px', md:'30px', sm:'24px', base:'20px'}}>
-                            <Center>Допомога у розвитку</Center>
-                            <Center>бізнес-проектів</Center>
+                            <Center>{t('Допомога у розвитку')}</Center>
+                            <Center>{t('бізнес-проектів')}</Center>
                         </Box>
                         </Link>
                         <Link as={RouterLink} to="/about/4"> 
                         <Box borderWidth={1} py={{lg:'34px', md:'30px', sm:'24px', base:'20px'}}>
-                            <Center >Допомога у відбудуванні</Center>
-                            <Center>втраченого житла</Center>
+                            <Center >{t('Допомога у відбудуванні')}</Center>
+                            <Center>{t('втраченого житла')}</Center>
                         </Box>
                         </Link>
                     </SimpleGrid>
@@ -141,11 +141,7 @@ function About() {
                             letterSpacing="0.2px"
                             fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}}
                             textTransform={"capitalize"}>
-                            Наша команда нараховує більше ніж 30 волонтерів та громадян, які
-                            спочатку вторгнення російського війська почали робити все, для 
-                            забезпечення життєдіяльності українського народу. Наша команда
-                            небайдужих громадян має мету - допомагати, будувати, розвивати
-                            єдине майбутнє разом
+                            {t("Наша команда нараховує більше ніж 30 волонтерів та громадян, які спочатку вторгнення російського війська почали робити все, для забезпечення життєдіяльності українського народу. Наша команданебайдужих громадян має мету - допомагати, будувати, розвиватиєдине майбутнє разом")}
                         </Box>
                     </Box>                                       
                 </Box>
@@ -158,19 +154,19 @@ function About() {
                         letterSpacing="0.2px"
                         textTransform={"uppercase"}
                         fontSize={{lg:'24px', md:'22px', sm:'18px', base:'16px'}}>
-                        допомога
+                        {t('допомога')}
                 </Box>
                 <Box backgroundColor={bg} 
                     paddingTop={8} 
                     paddingBottom={8}  
                     px={{lg:'200px', md:'150px', sm:'120px', base:'120px'}}
                     fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}}>
-                    Якщо ви бажаєте долучитися до нашої команди заповніть форму
+                    {t('Якщо ви бажаєте долучитися до нашої команди заповніть форму')}
                 </Box>
                 <Center>
                     <Button backgroundColor="orange" alignItems="center" borderRadius={0} onClick={onOpen}>
                         <Box fontSize="20px" fontWeight={600} lineHeight="30px">
-                            допомогти
+                            {t('допомогти')}
                         </Box>
                     </Button>
                 </Center> 
@@ -183,10 +179,10 @@ function About() {
                         <ModalHeader fontFamily={"Rutenia"}>
                             <Center px={"78px"} mt={"78px"} mb={"18px"} fontSize={{lg:'30px', md:'24px', sm:'20px', base:'16px'}}
                                     fontFamily={"Rutenia"} fontWeight={400} lineHeight={10} textTransform={"capitalize"}>
-                                Щоб разом будувати майбутнє</Center>
+                                {t('Щоб разом будувати майбутнє')}</Center>
                             <Center px={"78px"} mb={"48px"} mt={"18px"} fontSize={{lg:'30px', md:'24px', sm:'20px', base:'16px'}}
                                 fontFamily={"Rutenia"} fontWeight={400} lineHeight={10} textTransform={"capitalize"}>
-                                варто бути єдиними у спільній справі</Center>
+                                {t('варто бути єдиними у спільній справі')}</Center>
                         </ModalHeader>
                         <Box  px={"68px"} my={"20px"} >
                             <VStack textAlign={"right"} gap={"20px"}>
@@ -200,7 +196,7 @@ function About() {
                         <Center py={"20px"}>
                             <Button backgroundColor="orange" alignItems="center" borderRadius={0}>
                                 <Box fontSize="20px" fontWeight={600} lineHeight="30px">
-                                    надіслати  
+                                    {t('надіслати')}
                                 </Box>
                             </Button>
                         </Center> 

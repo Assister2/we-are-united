@@ -1,6 +1,7 @@
 import React ,{ useEffect, useState } from "react";
 import axios from "axios";
 import { Link as RouterLink } from "react-router-dom";
+import {useTranslation} from "react-i18next";
 import {
   Container,
   HStack,
@@ -34,10 +35,12 @@ const YOUR_PAT = 'pattgeELcYcjvzwSG.a95aa8b9b1ec83e15e67f5bdaea6edf9d96c024618f6
 const BASE_ID = 'applgD9CzrAvFqdsw';
 const TABLE_NAME = 'directions';
 
+
 function Direction() {
     const bg = useColorModeValue("white.50 ", "white.900");
     const cardBg = useColorModeValue("gray.50", "gray.900");
     const [itemData, setItemData] = useState([]);
+    const {t, i18n} = useTranslation('common');
     useEffect(() => {
         const fetchData = async () => {
           try {
@@ -67,29 +70,29 @@ function Direction() {
                         w="100%"
                         id="direction"
                         fontSize={{lg:'24px', md:'22px', sm:'18px', base:'16px'}}>
-                        напрямки
+                        {t('напрямки')}
                 </Box>
                 <Box w="100%">
                      <SimpleGrid columns={2} spacing={8}>
                         <Box bg={cardBg}>
-                            <Box width={"100%"} height={"300px"}>
+                            <Box width={"100%"} height={"320px"}>
                                 <Image src="../../assets/direction001.png" alt='item1' />
                             </Box>
                             <Box pl={16} pr={16}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'32px', md:'28px', base:'24px', sm:'24px'}}>
-                                    Дрони, “Очі в Небі”
+                                    {t("Дрони, 'Очі в Небі'")}
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
                                 <Link as={RouterLink} to="/payment">
                                 <Button backgroundColor="orange" fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderRadius={0}>
-                                    допомогти
+                                    {t('допомогти')}
                                 </Button>
                                 </Link>
                                 <Link as={RouterLink} to="/detail">
                                 <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
-                                    допомогти
+                                    {t('детально')}
                                 </Button>
                                 </Link>
                                 </Flex>
@@ -97,24 +100,24 @@ function Direction() {
                             
                         </Box>
                         <Box bg={cardBg}>
-                            <Box width={"100%"} height={"300px"}>
+                            <Box width={"100%"} height={"320px"}>
                             <Image src="../../assets/direction003.png" alt='item3' />
                             </Box>
                             <Box pl={16} pr={16}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'32px', md:'28px', base:'24px', sm:'24px'}}>
-                                    Дрони, “Очі в Небі”
+                                    {t("дрони, 'Світло'")}
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
                                 <Link as={RouterLink} to="/payment">
                                 <Button backgroundColor="orange" fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderRadius={0}>
-                                    допомогти
+                                    {t('допомогти')}
                                 </Button>
                                 </Link>
                                 <Link as={RouterLink} to="/detail">
                                 <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
-                                    допомогти
+                                    {t('детально')}
                                 </Button>
                                 </Link>
                                 </Flex>
@@ -122,24 +125,24 @@ function Direction() {
                             
                         </Box>
                         <Box bg={cardBg}>
-                            <Box width={"100%"} height={"300px"}>
+                            <Box width={"100%"} height={"320px"}>
                                 <Image src="../../assets/direction002.png" alt='item2' />
                             </Box>
                             <Box pl={16} pr={16}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'32px', md:'28px', base:'24px', sm:'24px'}}>
-                                    Дрони, “Очі в Небі”
+                                    {t("Літаки 'CPU'")}
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
                                 <Link as={RouterLink} to="/payment">
                                 <Button backgroundColor="orange" fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderRadius={0}>
-                                    допомогти
+                                    {t('допомогти')}
                                 </Button>
                                 </Link>
                                 <Link as={RouterLink} to="/detail">
                                 <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
-                                    допомогти
+                                    {t('детально')}
                                 </Button>
                                 </Link>
                                 </Flex>
@@ -147,26 +150,26 @@ function Direction() {
                             
                         </Box>
                         <Box bg={cardBg}>
-                            <Box width={"100%"} height={"300px"}>
+                            <Box width={"100%"} height={"320px"}>
                                 <Image src="../../assets/direction004.png" alt='item4' />
                             </Box>
                             <Box pl={16} pr={16}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'32px', md:'28px', base:'24px', sm:'24px'}}>
-                                    Дрони, “Очі в Небі”
+                                    {t("Тепловізори 'Ніч'")}
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
                                 <Link as={RouterLink} to="/payment">
                                 
                                 <Button backgroundColor="orange" fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderRadius={0}>
-                                    допомогти
+                                    {t('допомогти')}
                                 </Button>
                                 </Link>
                                 <Link as={RouterLink} to="/detail">
                                 
                                 <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
-                                    допомогти
+                                    {t('детально')}
                                 </Button>
                                 </Link>
                                 </Flex>
@@ -184,7 +187,7 @@ function Direction() {
                         w="100%"
                         fontSize="18px"
                         id="meeting">
-                        актуальні проєкти
+                        {t('актуальні проєкти')}
                     <SimpleGrid columns={3} spacing="30px">
                         <Box bg={cardBg}>
                             <Box width={"100%"} height={"200px"}>
@@ -194,17 +197,17 @@ function Direction() {
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
-                                    Назва проекту
+                                    {t('Назва проекту')}
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
                                     <Link as={RouterLink} to="/detail">
                                         <Button backgroundColor="orange" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderRadius={0}>
-                                            допомогти
+                                            {t('допомогти')}
                                         </Button>
                                     </Link>
                                     <Link as={RouterLink} to="/detail">
                                         <Button backgroundColor="white" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
-                                            переглянути
+                                            {t('переглянути')}
                                         </Button>
                                     </Link>
                                 </Flex>
@@ -219,17 +222,17 @@ function Direction() {
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
-                                    Назва проекту
+                                    {t('Назва проекту')}
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
                                     <Link as={RouterLink} to="/detail">
                                         <Button backgroundColor="orange" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderRadius={0}>
-                                            допомогти
+                                            {t('допомогти')}
                                         </Button>
                                     </Link>
                                     <Link as={RouterLink} to="/detail">
                                         <Button backgroundColor="white" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
-                                            переглянути
+                                            {t('переглянути')}
                                         </Button>
                                     </Link>
                                 </Flex>
@@ -244,17 +247,17 @@ function Direction() {
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
-                                    Назва проекту
+                                    {t('Назва проекту')}
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
                                     <Link as={RouterLink} to="/detail">
                                         <Button backgroundColor="orange" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderRadius={0}>
-                                            допомогти
+                                            {t('допомогти')}
                                         </Button>
                                     </Link>
                                     <Link as={RouterLink} to="/detail">
                                         <Button backgroundColor="white" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
-                                            переглянути
+                                            {t('переглянути')}
                                         </Button>
                                     </Link>
                                 </Flex>
@@ -268,7 +271,7 @@ function Direction() {
                         marginBottom={3}
                         w="100%"
                         fontSize="18px">
-                        виконані проєкти
+                        {t('виконані проєкти')}
                     <SimpleGrid columns={3} spacing="30px">
                         <Box bg={cardBg}>
                             <Box width={"100%"} height={"200px"}>
@@ -278,11 +281,11 @@ function Direction() {
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
-                                    Назва проекту
+                                    {t('Назва проекту')}
                                 </Box>
                                 <Box textAlign={"right"}>
                                     <Button backgroundColor="white" marginBottom={4} fontSize={{lg:'14px', md:'14px', sm:'12px', base:'10px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
-                                        переглянути
+                                    {t('переглянути')}
                                     </Button>
                                 </Box>
                             </Box>
@@ -295,11 +298,11 @@ function Direction() {
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
-                                    Назва проекту
+                                    {t('Назва проекту')}
                                 </Box>
                                 <Box textAlign={"right"}>
                                     <Button backgroundColor="white" marginBottom={4} fontSize={{lg:'14px', md:'14px', sm:'12px', base:'10px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
-                                        переглянути
+                                    {t('переглянути')}
                                     </Button>
                                 </Box>
                             </Box>
@@ -312,11 +315,11 @@ function Direction() {
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
-                                    Назва проекту
+                                    {t('Назва проекту')}
                                 </Box>
                                 <Box textAlign={"right"}>
                                     <Button backgroundColor="white" marginBottom={4} fontSize={{lg:'14px', md:'14px', sm:'12px', base:'10px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
-                                        переглянути
+                                    {t('переглянути')}
                                     </Button>
                                 </Box>
                             </Box>

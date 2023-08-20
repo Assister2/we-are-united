@@ -1,5 +1,7 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
+
+import {useTranslation} from "react-i18next";
 import {
   Container,
   HStack,
@@ -27,7 +29,10 @@ import {
   useBreakpointValue,
 } from "@chakra-ui/react";
 
+
+
 function BannerItem(){
+    const {t, i18n} = useTranslation('common');
     return(
         <Box w="100%" height={'800px'} pl={"116px"} pr={"53px"} bg={"white"} >
                     <Box position={"relative"} height={'800px'}>
@@ -46,7 +51,7 @@ function BannerItem(){
                                     lineHeight="30px"
                                     letterSpacing="-0.3px"
                                     textTransform={"capitalize"} color={"#fff"}>
-                                    МИ ЄДИНІ          
+                                    {t('МИ ЄДИНІ')}
                                 </Box>
                                 <Box textAlign={"left"} 
                                     marginTop={10}
@@ -55,16 +60,13 @@ function BannerItem(){
                                     fontWeight={500}
                                     lineHeight="35px"
                                     textTransform={"capitalize"} color={"#fff"}>
-                                    Команда активних українців, які мають спільну мету -
-                                    допомога українському народу у відбудові українських
-                                    поселень та осель сімей, які втратили дах над головою
-                                    від рук російського агресора. 
+                                    {t('Команда активних українців, які мають спільну мету - допомога українському народу у відбудові українських поселень та осель сімей, які втратили дах над головою від рук російського агресора.')}
                                 </Box>
                                 <Link as={RouterLink} to="/payment">
                                     <Box textAlign={"left" }>
                                         <Button backgroundColor="orange" alignItems="center" borderRadius={0}>
                                             <Box fontSize="20px" fontWeight={600} lineHeight="30px">
-                                                допомогти  
+                                                {t('допомогти')}
                                             </Box>
                                         </Button>
                                     </Box>

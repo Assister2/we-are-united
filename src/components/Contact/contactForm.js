@@ -1,5 +1,6 @@
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
+import {useTranslation} from "react-i18next";
 import {
   Container,
   HStack,
@@ -30,7 +31,7 @@ import {
 import { HamburgerIcon, CopyIcon, ChevronDownIcon } from "@chakra-ui/icons";
 
 function ContactForm( color, type) {
-    
+    const {t, i18n} = useTranslation('common');
     const cardBg = useColorModeValue("gray.50", "gray.900");
     return (
         <Box color={"#001430"} width={"742px"} py={"25px"} borderColor={"#001430"} borderWidth={1} borderRadius={0}>
@@ -41,23 +42,25 @@ function ContactForm( color, type) {
             </Box>
             <Center px={"78px"} mt={"78px"} mb={"18px"} fontSize={{lg:'30px', md:'24px', sm:'20px', base:'16px'}}
                 fontFamily={"Rutenia"} fontWeight={400} lineHeight={10} textTransform={"capitalize"}>
-                Щоб разом будувати майбутнє</Center>
+                {t('Щоб разом будувати майбутнє')}
+            </Center>
             <Center px={"78px"} mb={"48px"} mt={"18px"} fontSize={{lg:'30px', md:'24px', sm:'20px', base:'16px'}}
                 fontFamily={"Rutenia"} fontWeight={400} lineHeight={10} textTransform={"capitalize"}>
-                варто бути єдиними у спільній справі</Center>
+                {t('варто бути єдиними у спільній справі')}
+            </Center>
             <Box  px={"68px"} my={"20px"} >
                 <VStack textAlign={"right"} gap={"20px"}>
-                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder="ім’я"  />
-                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder="номер телефону"  />
-                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder="Email"  />
-                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder="У якому місті проживаєте?"  />
-                    <Input pt={"33px"} pb={"134px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder="Чим би могли і хотіли допомагати?"  />    
+                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('ім’я')}  />
+                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('номер телефону')}  />
+                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('Email')}  />
+                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('У якому місті проживаєте?')}  />
+                    <Input pt={"33px"} pb={"134px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('Чим би могли і хотіли допомагати?')}  />    
                 </VStack>
             </Box>
             <Center py={"20px"}>
                 <Button backgroundColor="orange" alignItems="center" borderRadius={0}>
                     <Box fontSize="20px" fontWeight={600} lineHeight="30px">
-                        надіслати  
+                        {t('надіслати')}
                     </Box>
                 </Button>
             </Center> 
