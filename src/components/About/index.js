@@ -177,7 +177,7 @@ function About() {
                 <Modal blockScrollOnMount={false} loseOnOverlayClick={false}
                         scrollBehavior="offside" backgroundColor={"white"}
                         isOpen={isOpen} onClose={onClose} size={"3xl"} borderWidth={1} borderRadius={0}>
-                    <ModalOverlay backdropBlur='2px' />
+                    <ModalOverlay backdropBlur='10px' backdropFilter='blur(10px) hue-rotate(0deg)'/>
                     <ModalContent height={"1006px"}>
                         <ModalCloseButton  textAlign={"right"}/>
                         <ModalHeader fontFamily={"Rutenia"}>
