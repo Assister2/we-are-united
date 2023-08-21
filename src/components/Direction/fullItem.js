@@ -31,7 +31,7 @@ const YOUR_PAT = 'pattgeELcYcjvzwSG.a95aa8b9b1ec83e15e67f5bdaea6edf9d96c024618f6
 const BASE_ID = 'applgD9CzrAvFqdsw';
 const TABLE_NAME = 'items';
 
-function FullItem() {
+function FullItem({index}) {
     
     const cardBg = useColorModeValue("gray.50", "gray.900");
     const [detailData, setDetailData] = useState([]);
@@ -43,7 +43,7 @@ function FullItem() {
               'Authorization': `Bearer ${YOUR_PAT}`
             }
           });
-            // console.log(response.data);
+            console.log(response.data.records[9].fields);
             setDetailData(response.data);
           } catch (error) {
             console.error(error);
@@ -51,7 +51,13 @@ function FullItem() {
         };
         fetchData();
       }, []);
+    console.log(detailData,"index", index,"DETAIL",detailData.records)
+    if(index != undefined && detailData != []){
+        detailData.records ? console.log("ADADASD",detailData.records[index]) : "";
+    }
     return (
+        <>
+        {detailData.records ? 
         <Box width={"100%"} px={"171px"} color={"#001430"} bgColor={"#fff"}>
             <Center py={"101px"} position={"relative"}>
                 <Box fontSize={{lg:'32px', md:'24px', sm:'20px', base:'16px'}}
@@ -73,11 +79,12 @@ function FullItem() {
                     color={"#000"} 
                     fontSize={{lg:'20px', md:'16px', sm:'12px', base:'10px'}}
                     fontWeight={600} lineHeight={"35px"}  letterSpacing={"0.2px"}>
-                    Наша мета — зібрати кошти на придбання транспортних
+                    {/* Наша мета — зібрати кошти на придбання транспортних
                     засобів для військових, які можна використовувати в
                     різних ситуаціях. Ми сподіваємося змінити ситуацію,
                     забезпечивши покращену мобільність і безпеку для
-                    наших військ.
+                    наших військ. */}
+                    {detailData.records[index].fields.Description}
                     </Box>
                     <Box py={"51px"}>
                         <HStack spacing='20px' verticalAlign="middle"
@@ -87,13 +94,13 @@ function FullItem() {
                             <Box py={"20px"} px={"58px"} borderWidth={1} borderRadius={0}>
                                 <Box textAlign={"center"}>зібрано</Box>
                                 <Box color={"orange"}>
-                                    5 500 грн
+                                {detailData.records[index].fields.Collected}
                                 </Box>
                             </Box>
                             <Box py={"20px"} px={"58px"} borderWidth={1} borderRadius={0}>
                                 <Box textAlign={"center"}>Потрібно</Box>
                                 <Box color={"orange"}>
-                                34 000 грн
+                                {detailData.records[index].fields.Required}
                                 </Box>
                             </Box>
                         </HStack>
@@ -103,7 +110,7 @@ function FullItem() {
                     </Button>
                 </Box>
                 <Box>
-                    <Image src="../../assets/car.png" alt='safari' />
+                    <Image src={detailData.records[index].fields.AppealImage[0].url} alt={detailData.records[index].fields.Name} />
                 </Box>
             </Flex>
              <Text textAlign={"left"} 
@@ -123,13 +130,24 @@ function FullItem() {
                 fontWeight={700} lineHeight={"21px"} letterSpacing={"0.2px"}
                 textTransform={"uppercase"} mb={"32px"} mt={"101px"}>фотозвіт</Text>
             <SimpleGrid columns={2} spacing={8}> 
-                <Box><Image src="../../assets/image-4.png" alt='item1' />
+                <Box>
+                    {/* <Image src="../../assets/image-4.png" alt='item1' /> */}
+                    <Image src={detailData.records[index].fields.ReportImage1[0].url} alt={detailData.records[index].fields.ReportImage1[0].filename} />
                 </Box>
-                <Box><Image src="../../assets/image-5.png" alt='item2' />
+                <Box>
+                <Image src={detailData.records[index].fields.ReportImage2[0].url} alt={detailData.records[index].fields.ReportImage2[0].filename} />
+                
+                    {/* <Image src="../../assets/image-5.png" alt='item2' /> */}
                 </Box>
-                <Box><Image src="../../assets/image-6.png" alt='item3' />
+                <Box>
+                <Image src={detailData.records[index].fields.ReportImage3[0].url} alt={detailData.records[index].fields.ReportImage3[0].filename} />
+                
+                    {/* <Image src="../../assets/image-6.png" alt='item3' /> */}
                 </Box>
-                <Box><Image src="../../assets/image-7.png" alt='item4' />
+                <Box>
+                <Image src={detailData.records[index].fields.ReportImage4[0].url} alt={detailData.records[index].fields.ReportImage4[0].filename} />
+                
+                    {/* <Image src="../../assets/image-7.png" alt='item4' /> */}
                 </Box>
             </SimpleGrid>
             <Text textAlign={"left"} 
@@ -153,6 +171,9 @@ function FullItem() {
             </Box>
                 
         </Box>
+        :
+        ''}
+        </>
     );
 }
 

@@ -90,7 +90,7 @@ function Direction() {
                                     {t('допомогти')}
                                 </Button>
                                 </Link>
-                                <Link as={RouterLink} to="/detail">
+                                <Link as={RouterLink} to="/detail/2">
                                 <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                     {t('детально')}
                                 </Button>
@@ -115,7 +115,7 @@ function Direction() {
                                     {t('допомогти')}
                                 </Button>
                                 </Link>
-                                <Link as={RouterLink} to="/detail">
+                                <Link as={RouterLink} to="/detail/8">
                                 <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                     {t('детально')}
                                 </Button>
@@ -140,7 +140,7 @@ function Direction() {
                                     {t('допомогти')}
                                 </Button>
                                 </Link>
-                                <Link as={RouterLink} to="/detail">
+                                <Link as={RouterLink} to="/detail/9">
                                 <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                     {t('детально')}
                                 </Button>
@@ -166,7 +166,7 @@ function Direction() {
                                     {t('допомогти')}
                                 </Button>
                                 </Link>
-                                <Link as={RouterLink} to="/detail">
+                                <Link as={RouterLink} to="/detail/1">
                                 
                                 <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                     {t('детально')}
@@ -200,12 +200,12 @@ function Direction() {
                                     {t('Назва проекту')}
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
-                                    <Link as={RouterLink} to="/detail">
+                                    <Link as={RouterLink} to="/detail/0">
                                         <Button backgroundColor="orange" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderRadius={0}>
                                             {t('допомогти')}
                                         </Button>
                                     </Link>
-                                    <Link as={RouterLink} to="/detail">
+                                    <Link as={RouterLink} to="/detail/0">
                                         <Button backgroundColor="white" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                             {t('переглянути')}
                                         </Button>
@@ -225,12 +225,12 @@ function Direction() {
                                     {t('Назва проекту')}
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
-                                    <Link as={RouterLink} to="/detail">
+                                    <Link as={RouterLink} to="/detail/7">
                                         <Button backgroundColor="orange" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderRadius={0}>
                                             {t('допомогти')}
                                         </Button>
                                     </Link>
-                                    <Link as={RouterLink} to="/detail">
+                                    <Link as={RouterLink} to="/detail/7">
                                         <Button backgroundColor="white" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                             {t('переглянути')}
                                         </Button>
@@ -250,12 +250,12 @@ function Direction() {
                                     {t('Назва проекту')}
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
-                                    <Link as={RouterLink} to="/detail">
+                                    <Link as={RouterLink} to="/detail/3">
                                         <Button backgroundColor="orange" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderRadius={0}>
                                             {t('допомогти')}
                                         </Button>
                                     </Link>
-                                    <Link as={RouterLink} to="/detail">
+                                    <Link as={RouterLink} to="/detail/3">
                                         <Button backgroundColor="white" fontSize={{lg:'12px', md:'8px', sm:'6px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                             {t('переглянути')}
                                         </Button>
@@ -283,11 +283,13 @@ function Direction() {
                                     fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
                                     {t('Назва проекту')}
                                 </Box>
+                                <Link as={RouterLink} to="/detail/4"> 
                                 <Box textAlign={"right"}>
                                     <Button backgroundColor="white" marginBottom={4} fontSize={{lg:'14px', md:'14px', sm:'12px', base:'10px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                     {t('переглянути')}
                                     </Button>
                                 </Box>
+                                </Link>
                             </Box>
                         </Box>
                         <Box bg={cardBg}>
@@ -300,11 +302,13 @@ function Direction() {
                                     fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
                                     {t('Назва проекту')}
                                 </Box>
+                                <Link as={RouterLink} to="/detail/5"> 
                                 <Box textAlign={"right"}>
                                     <Button backgroundColor="white" marginBottom={4} fontSize={{lg:'14px', md:'14px', sm:'12px', base:'10px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                     {t('переглянути')}
                                     </Button>
                                 </Box>
+                                </Link>
                             </Box>
                         </Box>
                         <Box bg={cardBg}>
@@ -317,11 +321,13 @@ function Direction() {
                                     fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
                                     {t('Назва проекту')}
                                 </Box>
+                                <Link as={RouterLink} to="/detail/6"> 
                                 <Box textAlign={"right"}>
                                     <Button backgroundColor="white" marginBottom={4} fontSize={{lg:'14px', md:'14px', sm:'12px', base:'10px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
                                     {t('переглянути')}
                                     </Button>
                                 </Box>
+                                </Link>
                             </Box>
                         </Box>
                     </SimpleGrid>

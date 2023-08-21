@@ -2,7 +2,6 @@ import React from "react";
 import {
     Container,
     HStack,
-    Link,
     Grid,
     Box,
     Flex,
@@ -23,13 +22,15 @@ import {
     SimpleGrid,
     space,
   } from "@chakra-ui/react";
-
+import {Route, Link, Routes, useParams} from 'react-router-dom';
 import FullItem from "components/Direction/fullItem";
 
-function Detail() {
+function Detail({}) {
+  const params = useParams();
+  console.log("ID",params.id);
   return (
     <Container maxW="1512px" py={"90px"}>
-        <FullItem />
+        <FullItem index={params.id}/>
     </Container>
   );
 }

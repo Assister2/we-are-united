@@ -32,6 +32,10 @@ const routes = [
     page: <About id/>,
   },
   {
+    path: "/detail/:id",
+    page: <Detail id/>,
+  },
+  {
     path: "/directions",
     page: <Directions />,
   },
