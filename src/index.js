@@ -25,9 +25,9 @@ i18next.init({
         de: {
           common: common_de
         },
-        // fr: {
-        //   common: common_fr
-        // },
+        fr: {
+          common: common_fr
+        },
         es: {
           common: common_es
         },
