@@ -31,9 +31,9 @@ i18next.init({
         es: {
           common: common_es
         },
-        // it: {
-        //   common: common_it
-        // }
+        it: {
+          common: common_it
+        }
     },
 });
 
