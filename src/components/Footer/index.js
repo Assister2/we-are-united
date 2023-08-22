@@ -32,7 +32,7 @@ function Footer() {
     const cardBg = useColorModeValue("gray.50", "gray.900");
     const textBg = useColorModeValue("#001430");
     return (
-        <chakra.footer maxWidth="1512px" bg={cardBg} fontFamily={"Montserrat"} color="#001430">
+        <chakra.footer bg={cardBg} fontFamily={"Montserrat"} color="#001430">
             
             <Container maxW="1170px"
                         py={10}
