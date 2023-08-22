@@ -164,8 +164,8 @@ function Navbar() {
                     </Flex>
                   </MenuButton>
                   <MenuList  style={{ width: "100px", minWidth: '100px' }}>
-                    <MenuItem onClick={() => handleMenuItemClick("en")} w={"inherit"}>EN</MenuItem>
                     <MenuItem onClick={() => handleMenuItemClick("ua")} w={"inherit"}>UA</MenuItem>
+                    <MenuItem onClick={() => handleMenuItemClick("en")} w={"inherit"}>EN</MenuItem>
                     <MenuItem onClick={() => handleMenuItemClick("fr")} w={"inherit"}>FR</MenuItem>
                     <MenuItem onClick={() => handleMenuItemClick("es")} w={"inherit"}>ES</MenuItem>
                     <MenuItem onClick={() => handleMenuItemClick("de")} w={"inherit"}>DE</MenuItem>
@@ -194,8 +194,8 @@ function Navbar() {
                     </Flex>
                   </MenuButton>
                   <MenuList  style={{ width: "100px", minWidth: '100px' }}>
-                    <MenuItem onClick={() => handleMenuItemClick("en")} w={"inherit"}>EN</MenuItem>
                     <MenuItem onClick={() => handleMenuItemClick("ua")} w={"inherit"}>UA</MenuItem>
+                    <MenuItem onClick={() => handleMenuItemClick("en")} w={"inherit"}>EN</MenuItem>
                     <MenuItem onClick={() => handleMenuItemClick("fr")} w={"inherit"}>FR</MenuItem>
                     <MenuItem onClick={() => handleMenuItemClick("es")} w={"inherit"}>ES</MenuItem>
                     <MenuItem onClick={() => handleMenuItemClick("de")} w={"inherit"}>DE</MenuItem>
