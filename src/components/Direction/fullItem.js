@@ -90,7 +90,7 @@ function FullItem({index}) {
                         <HStack spacing='20px' verticalAlign="middle"
                             fontSize={{lg:'24px', md:'20px', sm:'16px', base:'12px'}}
                             fontWeight={600} lineHeight={"30px"} letterSpacing={"0.2px"}
-                            textTransform={"capitalize"}>
+                            >
                             <Box py={"20px"} px={"58px"} borderWidth={1} borderRadius={0}>
                                 <Box textAlign={"center"}>зібрано</Box>
                                 <Box color={"orange"}>
@@ -113,7 +113,7 @@ function FullItem({index}) {
                     <Image src={detailData.records[index].fields.AppealImage[0].url} alt={detailData.records[index].fields.Name} />
                 </Box>
             </Flex>
-             <Text textAlign={"left"} 
+            <Text textAlign={"left"} py={10}
                 font-size={{lg:'24px', md:'20px', sm:'16px', base:'12px'}}
                 fontWeight={700} lineHeight={"21px"} letterSpacing={"0.2px"}
                 textTransform={"uppercase"} mb={"18px"}>Наше звернення</Text>

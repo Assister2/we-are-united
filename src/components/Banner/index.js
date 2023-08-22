@@ -61,7 +61,7 @@ function Navbar() {
               'Authorization': `Bearer ${YOUR_PAT}`
             }
           });
-            // console.log(response.data);
+            console.log(response.data);
             setInjuredData(response.data);
           } catch (error) {
             console.error(error);
@@ -91,7 +91,7 @@ function Navbar() {
                                     fontWeight={600}
                                     lineHeight="30px"
                                     letterSpacing="-0.3px"
-                                    textTransform={"capitalize"} color={"#fff"}>
+                                     color={"#fff"}>
                                     МИ ЄДИНІ          
                                 </Box>
                                 <Box textAlign={"left"} 
@@ -100,7 +100,7 @@ function Navbar() {
                                     fontSize={{lg:'20px', md:'20px', base:'12px', sm:'16px'}}
                                     fontWeight={500}
                                     lineHeight="35px"
-                                    textTransform={"capitalize"} color={"#fff"}>
+                                     color={"#fff"}>
                                     Команда активних українців, які мають спільну мету -
                                     допомога українському народу у відбудові українських
                                     поселень та осель сімей, які втратили дах над головою
@@ -147,7 +147,7 @@ function Navbar() {
                         fontWeight="700"
                         letterSpacing="0.3px"
                         lineHeight="21px"
-                        textTransform={"capitalize"}>
+                        >
                         ВІЙНА РОСІЇ ПРОТИ УКРАЇНСЬКИХ ДІТЕЙ 
                     </Center>
                     <Grid templateColumns='repeat(30 , 1fr)' gap={4}>
@@ -162,7 +162,7 @@ function Navbar() {
                                 fontSize={{base:'16px',md:'24px',lg:'30px'}}
                                 fontWeight="600"
                                 lineHeight="21px"
-                                textTransform={"capitalize"}>
+                                >
                             СТАНОМ НА 01.06.2022
                         </GridItem >
                     </Grid>
@@ -175,7 +175,7 @@ function Navbar() {
                         fontWeight={600}
                         lineHeight="21px"
                         letterSpacing="-0.3px"
-                        textTransform={"capitalize"}>
+                        >
                         ПОСТРАЖДАЛІ
                     </Box>
                     <Flex justify={"space-between"} paddingBottom={10}>
@@ -252,7 +252,7 @@ function Navbar() {
                         fontWeight={600}
                         lineHeight="21px"
                         letterSpacing="-0.3px"
-                        textTransform={"capitalize"}>
+                        >
                         ПОСТРАЖДАЛІ
                     </Box>
                     <Box>

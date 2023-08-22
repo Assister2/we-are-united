@@ -26,21 +26,26 @@ import {
   SimpleGrid,
   space,
 } from "@chakra-ui/react";
-import PayItem from "components/payItem";
-import fullItem from "./fullItem";
-import DirectionItem from "./item";
+// import PayItem from "components/payItem";
+// import fullItem from "./fullItem";
+// import DirectionItem from "./item";
 import { HashLink, NavHashLink } from 'react-router-hash-link';
 
 const YOUR_PAT = 'pattgeELcYcjvzwSG.a95aa8b9b1ec83e15e67f5bdaea6edf9d96c024618f60391a1347de366acc10c';
 const BASE_ID = 'applgD9CzrAvFqdsw';
 const TABLE_NAME = 'directions';
-
+const directionItem = [];
+const ongoingItem = [];
+const completeItem = [];
 
 function Direction() {
     const bg = useColorModeValue("white.50 ", "white.900");
     const cardBg = useColorModeValue("gray.50", "gray.900");
     const [itemData, setItemData] = useState([]);
     const {t, i18n} = useTranslation('common');
+    const [directionItem, setDirectionItem ] = useState([]);
+    const [ongoingItem, setOngoingItem] = useState([]);
+    const [completeItem, setCompletedItem] = useState([]);
     useEffect(() => {
         const fetchData = async () => {
           try {
@@ -50,7 +55,23 @@ function Direction() {
             }
           });
             console.log(response.data);
+            const tempCompleteItem = []; const tempDirectionItem = []; const tempOngoingItem = [];22222
+            response.data.records.map((val)=>{
+                if (val.fields.Notes == 'completed projects') {
+                    tempCompleteItem.push(val);
+                }
+                else if (val.fields.Notes == "directions") {
+                    tempDirectionItem.push(val)
+                }
+                else if (val.fields.Notes == "actual projects" ) {
+                    tempOngoingItem.push(val);
+                }
+            })
             setItemData(response.data);
+            setDirectionItem(tempDirectionItem);
+            setCompletedItem(tempCompleteItem);
+            setOngoingItem(tempOngoingItem);
+            console.log("ITEM",tempDirectionItem,"COMPLETED",tempCompleteItem,"ONGOING",tempOngoingItem)
           } catch (error) {
             console.error(error);
           }
@@ -69,6 +90,7 @@ function Direction() {
                         marginBottom={3}
                         w="100%"
                         id="direction"
+                        textTransform={"capitalize"}
                         fontSize={{lg:'24px', md:'22px', sm:'18px', base:'16px'}}>
                         {t('напрямки')}
                 </Box>
@@ -86,24 +108,23 @@ function Direction() {
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
                                 <Link as={RouterLink} to="/payment">
-                                <Button backgroundColor="orange" fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderRadius={0}>
-                                    {t('допомогти')}
-                                </Button>
+                                    <Button backgroundColor="orange" fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderRadius={0}>
+                                        {t('допомогти')}
+                                    </Button>
                                 </Link>
                                 <Link as={RouterLink} to="/detail/2">
-                                <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
-                                    {t('детально')}
-                                </Button>
+                                    <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
+                                        {t('детально')}
+                                    </Button>
                                 </Link>
                                 </Flex>
                             </Box>
-                            
                         </Box>
                         <Box bg={cardBg}>
                             <Box width={"100%"} height={"320px"}>
                             <Image src="../../assets/direction003.png" alt='item3' />
                             </Box>
-                            <Box pl={16} pr={16}>
+                            <Box pl={16} pr={16}>   
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'32px', md:'28px', base:'24px', sm:'24px'}}>
@@ -175,10 +196,6 @@ function Direction() {
                                 </Flex>
                             </Box>
                         </Box>
-                        {/* {(() => {
-
-                        })} */}
-                        {/* <DirectionItem /> */}
                      </SimpleGrid>
                 </Box>
                 <Box  textAlign={"left"} 
@@ -186,18 +203,19 @@ function Direction() {
                         marginBottom={3}
                         w="100%"
                         fontSize="18px"
+                        textTransform={"capitalize"}
                         id="meeting">
                         {t('актуальні проєкти')}
                     <SimpleGrid columns={3} spacing="30px">
                         <Box bg={cardBg}>
-                            <Box width={"100%"} height={"200px"}>
+                            <Box width={"100%"} py={5} textAlign={"-webkit-center"} height={"240px"} alignItems={"center"} >
                                 <Image src="../../assets/direction005.png" alt='item5' />
                             </Box>
                             <Box pl={12} pr={12}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
-                                    {t('Назва проекту')}
+                                    {t('Радіомонтаж')}
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
                                     <Link as={RouterLink} to="/detail/0">
@@ -214,15 +232,15 @@ function Direction() {
                             </Box>
                             
                         </Box>
-                        <Box bg={cardBg}>
-                            <Box width={"100%"} height={"200px"}>
+                        <Box bg={cardBg} >
+                            <Box width={"100%"} height={"240px"} py={5} textAlign={"-webkit-center"}>
                                 <Image src="../../assets/direction006.png" alt='item6' />
                             </Box>
                             <Box pl={12} pr={12}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
-                                    {t('Назва проекту')}
+                                    {t('Автомобілі')}
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
                                     <Link as={RouterLink} to="/detail/7">
@@ -240,14 +258,14 @@ function Direction() {
                             
                         </Box>
                         <Box bg={cardBg}>
-                            <Box width={"100%"} height={"200px"}>
+                            <Box width={"100%"} height={"240px"} py={5} textAlign={"-webkit-center"}>
                                 <Image src="../../assets/direction007.png" alt='item7' />
                             </Box>
                             <Box pl={12} pr={12}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
-                                    {t('Назва проекту')}
+                                    {t('Дрони')}
                                 </Box>
                                 <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
                                     <Link as={RouterLink} to="/detail/3">
@@ -269,19 +287,20 @@ function Direction() {
                 <Box  textAlign={"left"} 
                         marginTop={5}
                         marginBottom={3}
+                        textTransform={"capitalize"}
                         w="100%"
                         fontSize="18px">
                         {t('виконані проєкти')}
                     <SimpleGrid columns={3} spacing="30px">
                         <Box bg={cardBg}>
-                            <Box width={"100%"} height={"200px"}>
+                            <Box width={"100%"} height={"240px"} py={5} textAlign={"-webkit-center"}>
                                 <Image src="../../assets/direction008.png" alt='item8' />
                             </Box>
                             <Box pl={12} pr={12}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
-                                    {t('Назва проекту')}
+                                    {t('рації')}
                                 </Box>
                                 <Link as={RouterLink} to="/detail/4"> 
                                 <Box textAlign={"right"}>
@@ -293,14 +312,14 @@ function Direction() {
                             </Box>
                         </Box>
                         <Box bg={cardBg}>
-                            <Box width={"100%"} height={"200px"}>
+                            <Box width={"100%"} height={"240px"} py={5} textAlign={"-webkit-center"}>
                                 <Image src="../../assets/direction009.png" alt='item9' />
                             </Box>
                             <Box pl={12} pr={12}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
-                                    {t('Назва проекту')}
+                                    {t('Тактичні аптечки')}
                                 </Box>
                                 <Link as={RouterLink} to="/detail/5"> 
                                 <Box textAlign={"right"}>
@@ -312,14 +331,14 @@ function Direction() {
                             </Box>
                         </Box>
                         <Box bg={cardBg}>
-                            <Box width={"100%"} height={"200px"}>
+                            <Box width={"100%"} height={"240px"} py={5} textAlign={"-webkit-center"}>
                                 <Image src="../../assets/direction010.png" alt='item10' />
                             </Box>
                             <Box pl={12} pr={12}>
                                 <Box textAlign={"left"}
                                     marginBottom={3}
                                     fontSize={{lg:'20px', md:'12px', sm:'12px', base:'10px'}}>
-                                    {t('Назва проекту')}
+                                    {t('БПЛА')}
                                 </Box>
                                 <Link as={RouterLink} to="/detail/6"> 
                                 <Box textAlign={"right"}>

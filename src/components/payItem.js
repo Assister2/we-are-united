@@ -63,8 +63,7 @@ function PayItem( color, type) {
                     fontSize={{lg:'32px', md:'28px', base:'24px', sm:'24px'}}
                     fontWeight={600}
                     lineHeight="21px"
-                    letterSpacing="-0.3px"
-                    textTransform={"capitalize"}>
+                    letterSpacing="-0.3px">
                     {t('Платежі з-за кордону та по україні')}
                 </Box>
                 <Box width={"559px"} borderWidth={1} borderRadius={0} paddingTop={"18px"} paddingBottom={"18px"} paddingLeft={"24px"} paddingRight={"24px"}>
@@ -94,7 +93,7 @@ function PayItem( color, type) {
                     fontWeight={600}
                     lineHeight="21px"
                     letterSpacing="-0.3px"
-                    textTransform={"capitalize"}>
+                    >
                     {t('swift перекази з-за кордону')} 
                 </Box>
                 <Box width={"559px"} borderWidth={1} borderRadius={0} paddingTop={"18px"} paddingBottom={"18px"} paddingLeft={"24px"} paddingRight={"24px"}>
@@ -161,7 +160,7 @@ function PayItem( color, type) {
                     fontWeight={600}
                     lineHeight="21px"
                     letterSpacing="-0.3px"
-                    textTransform={"capitalize"}>
+                    >
                     {t('криптовалюта')}
                 </Box>
                 <Box width={"559px"} borderWidth={1} borderRadius={0} paddingTop={"18px"} paddingBottom={"18px"} paddingLeft={"24px"} paddingRight={"24px"}>
@@ -203,10 +202,10 @@ function PayItem( color, type) {
                     fontWeight={600}
                     lineHeight="21px"
                     letterSpacing="-0.3px"
-                    textTransform={"capitalize"}>
+                    >
                     {t('інформація про банк отримувача')} 
                 </Box>
-                <Box width={"559px"} fontSize={"20px"} fontWeight={600} lineHeight={"40px"} letterSpacing={"0.2px"} borderWidth={1} borderRadius={0} paddingTop={"18px"} paddingBottom={"18px"} paddingLeft={"24px"} paddingRight={"24px"}>
+                <Box width={"559px"} fontSize={"20px"} fontWeight={600} lineHeight={"40px"} letterSpacing={"0.2px"} borderWidth={0} borderRadius={0} paddingTop={"18px"} paddingBottom={"18px"} paddingLeft={"24px"} paddingRight={"24px"}>
                     <Box  pt={3} pb={3}>
                     {t('Beneficiary Bank Address')}
                     </Box>

@@ -30,7 +30,7 @@ function AboutItem3 () {
     const about14= "Даємо звітність про закінчення проекту";
     return (
     <Container maxW="1512px" px={"171px"} py={"30px"}>
-    <Box py={"70px"} textAlign={"left"} fontSize={font32}>
+    <Box py={"70px"} textAlign={"left"} fontSize={font32} fontWeight={"bold"}>
         {t('допомога у відбудові втраченого житла українських сімей')}
     </Box>
     <Box>

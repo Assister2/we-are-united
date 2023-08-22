@@ -22,7 +22,7 @@ function AboutItem4() {
 
    return (
     <Container maxW="1512px" px={"171px"} py={"30px"}>
-    <Box py={"70px"} textAlign={"left"} fontSize={font32}>
+    <Box py={"70px"} textAlign={"left"} fontSize={font32} fontWeight={"bold"}>
         {t('Допомога, підтримка і розвиток малого та середнього бізнесу в Україні')}
     </Box>
     <Box>

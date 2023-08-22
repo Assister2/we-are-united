@@ -27,7 +27,7 @@ import FullItem from "components/Direction/fullItem";
 
 function Detail({}) {
   const params = useParams();
-  console.log("ID",params.id);
+  console.log("ID", params.id);
   return (
     <Container maxW="1512px" py={"90px"}>
         <FullItem index={params.id}/>

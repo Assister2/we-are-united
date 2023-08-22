@@ -13,7 +13,8 @@ function TextItem({about1 , wei}) {
   console.log("t",t, "about", about1)
   return (
     <Text textAlign={"justify"} fontSize={font20}
-    fontFamily={"Montserrat"} fontStyle={"normal"} fontWeight={wei}
+    fontFamily={"Montserrat"} fontStyle={"normal"} fontWeight={wei==700 ? "bold" : "semibold"}
+    
     lineHeight={"40px"} letterSpacing={"0.2px"} font-variant="small-caps"
     >{t(about1)}</Text>
   );

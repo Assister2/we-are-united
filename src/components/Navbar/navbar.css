@@ -6,3 +6,6 @@
 .language-icon{
     margin-left: 44px !important;
 }
+.hover_action_hashlink:hover{
+    text-decoration: underline;
+}

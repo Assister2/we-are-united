@@ -116,27 +116,28 @@ function Navbar() {
                     напрямки
                   </Box>
                 </Link> */}
-                <HashLink to="/directions#direction" 
+                <HashLink to="/directions#direction" class="hover_action_hashlink"
                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}>
-                  <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
+                  <Box fontSize="24px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
                     {t('напрямки')}
                   </Box>
                 </HashLink>
-                <HashLink to="/directions#meeting" 
+                <HashLink to="/directions#meeting" class="hover_action_hashlink"
                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}>
-                  <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
+                  <Box fontSize="24px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
                     {t('ЗБОРИ')}
                   </Box>
                 </HashLink>
-                <HashLink to="/directions#about" 
+                <HashLink to="/directions#about" class="hover_action_hashlink"
+                // _hover={{ textDecoration : 'underline'}}   style={{ '&:hover':{textDecoration : 'underline'} }}
                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}>
-                  <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
+                  <Box fontSize="24px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
                     {t('ПРО НАС')}
                   </Box>
                 </HashLink>
                 <Link as={RouterLink}
                  to="/contacts">
-                  <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
+                  <Box fontSize="24px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
                     {t('контакти')}
                   </Box>
                 </Link>

@@ -41,11 +41,11 @@ function ContactForm( color, type) {
                 </svg>
             </Box>
             <Center px={"78px"} mt={"78px"} mb={"18px"} fontSize={{lg:'30px', md:'24px', sm:'20px', base:'16px'}}
-                fontFamily={"Rutenia"} fontWeight={400} textAlign={"center"} lineHeight={10} textTransform={"capitalize"}>
+                fontFamily={"Rutenia"} fontWeight={400} textAlign={"center"} lineHeight={10} >
                 {t('Щоб разом будувати майбутнє')}
             </Center>
             <Center px={"78px"} mb={"48px"} mt={"18px"} fontSize={{lg:'30px', md:'24px', sm:'20px', base:'16px'}}
-                fontFamily={"Rutenia"} textAlign={"center"} fontWeight={400} lineHeight={10} textTransform={"capitalize"}>
+                fontFamily={"Rutenia"} textAlign={"center"} fontWeight={400} lineHeight={10} >
                 {t('варто бути єдиними у спільній справі')}
             </Center>
             <Box  px={"68px"} my={"20px"} >

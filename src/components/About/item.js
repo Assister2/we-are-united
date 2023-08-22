@@ -19,7 +19,7 @@ function AboutItem1() {
     const about5= "Долучайся, Допомагай, Спасай!";
    return (
     <Container maxW="1512px" px={"171px"} py={"30px"}>
-    <Box py={"70px"} textAlign={"left"} fontSize={font32}>
+    <Box py={"70px"} textAlign={"left"} fontSize={font32} fontWeight={"bold"}>
         {t('Гуманітарна допомога Українському народу')}
     </Box>
     <Box>

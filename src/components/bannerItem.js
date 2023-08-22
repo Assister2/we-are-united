@@ -50,7 +50,7 @@ function BannerItem(){
                                     fontWeight={600}
                                     lineHeight="30px"
                                     letterSpacing="-0.3px"
-                                    textTransform={"capitalize"} color={"#fff"}>
+                                     color={"#fff"}>
                                     {t('МИ ЄДИНІ')}
                                 </Box>
                                 <Box textAlign={"left"} 
@@ -59,7 +59,7 @@ function BannerItem(){
                                     fontSize={{lg:'20px', md:'20px', base:'12px', sm:'16px'}}
                                     fontWeight={500}
                                     lineHeight="35px"
-                                    textTransform={"capitalize"} color={"#fff"}>
+                                     color={"#fff"}>
                                     {t('Команда активних українців, які мають спільну мету - допомога українському народу у відбудові українських поселень та осель сімей, які втратили дах над головою від рук російського агресора.')}
                                 </Box>
                                 <Link as={RouterLink} to="/payment">

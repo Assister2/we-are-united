@@ -45,7 +45,7 @@ function BannerItem2( color, type) {
                             fontWeight={600}
                             lineHeight="30px"
                             letterSpacing="-0.3px"
-                            textTransform={"capitalize"} color={"#fff"}>
+                             color={"#fff"}>
                             МИ ЄДИНІ          
                         </Box>
                         <Box textAlign={"left"} 
@@ -54,7 +54,7 @@ function BannerItem2( color, type) {
                             fontSize={{lg:'20px', md:'20px', base:'12px', sm:'16px'}}
                             fontWeight={500}
                             lineHeight="35px"
-                            textTransform={"capitalize"} color={"#fff"}>
+                             color={"#fff"}>
                             Команда активних українців, які мають спільну мету -
                             допомога українському народу у відбудові українських
                             поселень та осель сімей, які втратили дах над головою

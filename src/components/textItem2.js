@@ -13,12 +13,12 @@ function TextItem2({about1, about2}) {
    return (
       <>
         <Text textAlign={"left"} fontSize={font20}
-        fontFamily={"Montserrat"} fontStyle={"normal"} fontWeight={700}
+        fontFamily={"Montserrat"} fontStyle={"normal"} fontWeight={"bold"}
         lineHeight={"40px"} letterSpacing={"0.2px"} font-variant="small-caps"
         mb={5}
         >{t(about1)}</Text>
         <Text textAlign={"justify"} fontSize={font20}
-        fontFamily={"Montserrat"} fontStyle={"normal"} fontWeight={600}
+        fontFamily={"Montserrat"} fontStyle={"normal"} fontWeight={"semibold"}
         lineHeight={"40px"} letterSpacing={"0.2px"} font-variant="small-caps">
         {t(about2)}
         </Text>

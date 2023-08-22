@@ -92,7 +92,7 @@ function About() {
                             lineHeight="30px"
                             letterSpacing="0.2px"
                             fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}}
-                            textTransform={"capitalize"}>
+                            >
                             {t("Ми Єдині - офіційно зареєстрована організація, яка готова до співпраці з міжнародними фондами та небайдужими людьми, яких об'єднує спільність та добра воля. Будуємо спільне майбутнє разом.")}
                         </Box>
                     </Box>                                       
@@ -140,7 +140,7 @@ function About() {
                             lineHeight="30px"
                             letterSpacing="0.2px"
                             fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}}
-                            textTransform={"capitalize"}>
+                            >
                             {t("Наша команда нараховує більше ніж 30 волонтерів та громадян, які спочатку вторгнення російського війська почали робити все, для забезпечення життєдіяльності українського народу. Наша команданебайдужих громадян має мету - допомагати, будувати, розвиватиєдине майбутнє разом")}
                         </Box>
                     </Box>                                       
@@ -178,10 +178,10 @@ function About() {
                         <ModalCloseButton  textAlign={"right"}/>
                         <ModalHeader fontFamily={"Rutenia"}>
                             <Center px={"78px"} mt={"78px"} mb={"18px"} fontSize={{lg:'30px', md:'24px', sm:'20px', base:'16px'}}
-                                    fontFamily={"Rutenia"} fontWeight={400} lineHeight={10} textTransform={"capitalize"}>
+                                    fontFamily={"Rutenia"} fontWeight={400} lineHeight={10} >
                                 {t('Щоб разом будувати майбутнє')}</Center>
                             <Center px={"78px"} mb={"48px"} mt={"18px"} fontSize={{lg:'30px', md:'24px', sm:'20px', base:'16px'}}
-                                fontFamily={"Rutenia"} fontWeight={400} lineHeight={10} textTransform={"capitalize"}>
+                                fontFamily={"Rutenia"} fontWeight={400} lineHeight={10} >
                                 {t('варто бути єдиними у спільній справі')}</Center>
                         </ModalHeader>
                         <Box  px={"68px"} my={"20px"} >
