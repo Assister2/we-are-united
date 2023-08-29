@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 
 import { Route, Routes } from "react-router-dom";
-
+import i18n from './i18n';
 import Fallback from "pages/Fallback";
 import Navbar from "components/Navbar";
 import Banner from "components/Banner";
@@ -13,8 +13,10 @@ import PayItem from "components/payItem";
 import axios from "axios";
 
 export default function App() {
+  // const [locale, setLocale] = useState(i18n.language);
   return (
     <>
+    {/* <LocaleContext.Provider value={{locale, setLocale}}> */}
       <Navbar />
       {/* <Banner />
       <Direction />
@@ -29,6 +31,7 @@ export default function App() {
         </Routes>
       </Suspense>
       <Footer />
+      {/* </LocaleContext.Provider> */}
     </>
   );
 }

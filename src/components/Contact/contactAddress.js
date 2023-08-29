@@ -37,7 +37,7 @@ function ContactAddress( color, type) {
             <Box fontSize={{lg:'32px', md:'24px', sm:'16px', base:'12px'}}
               fontStyle={"normal"} fontWeight={700} lineHeight={"21px"}
               textTransform={"uppercase"} mb={"30px"}>
-              {t('контакти')}
+              {t('CONTACTS')}
             </Box>
             <Box mt={"17px"}>
               <VStack alignItems={"start"} textAlign={"left"} gap={4}>

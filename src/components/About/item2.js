@@ -14,27 +14,27 @@ function AboutItem2() {
    const font20 = {lg:'20px', md:'16px', sm:'12px', base:'8px'};
    const font32 = {lg:'32px', md:'28px', base:'24px', sm:'24px'};
    const about = []; 
-   const about1 = "З початку російського вторгнення в Україну, наша команда МБФ 'Ми Єдині' спільно з волонтерами та небайдужими громадянами допомагають нашим військовим на фронті.";
-    const about2 ="Що саме входить у допомогу військовим?";
-    const about3= "Ми проводимо закупівлі необхідного тактичного військового обладнання для мобільності та покращення бойових дії Збройних Сил України. Також закуповуємо набори санітарної та медичної допомоги військовим.";
-    const about4= "Частіше всього збір та закупівля обладнання для мобільності проводиться під безпосередній запит військових.";
-    const about5= "Автомобіль типу пікап";
-    const about6= "Використовують для швидкого реагування військових; висадки в точках, де виконують бойові завдання; евакуації поранених та цивільних осіб; для прикриття військових та цивільних мешканців;";
-    const about7= "Автомобілі типу фургон";
-    const about8= "Більш всього слугують для евакуації поранених; доставки гуманітарної допомоги в гарячі точки, в місця, де гуманітарна криза, в міста та села, які постраждали від російського вторгнення.";
-    const about9= "Закупівля багів";
-    const about10= "Завдяки такому виду транспорту українські захисники мають значну перевагу над російськими супротивниками. Тримаючи у підрозділах ЗСУ мобільні баги наші військові мають змогу підвозити боєкомплекти в недоступні місця для іншого виду транспорту; швидко відпрацьовувати позиції ворога; виконувати надскладні завдання. За допомогою таких багів підрозділи українських збройних сил виконують ефективно поставлені завдання, знищуючи ворога раз і назавжди.";
-    const about11= "Закупівля електробайків";
-    const about12=  "Ще один вид транспорту, завдяки якому, українські військові мають змогу беззвучно та швидко пересуватись у сторону ворога, проводячи вдалі маневри для знищення російських вбивць та згодом зникати непоміченими. Електричні байки це ще одна діюча перевага в мобільності спеціальних військових груп.";
-    const about13= "Закупівля квадрокоптерів та безпілотних літальних апаратів";
-    const about14= "У цю мить без цього обладнання неможлива тактичність будь-якого українського військового підрозділу, тому що задля безпеки військових спочатку території України перевіряють на наявність терористів російської армії. Тому квадрокоптери та безпілотники мають велике значення у напрямку розвідки.";
-    const about15= "Закупівля медичного устаткування";
-    const about16= "Безпосередньо для проведення захисних чи наступаючих бойових дій нашим захисникам завжди потрібно мати з собою набір першої медичної допомоги. Завдяки медичному устаткуванню наші військові мають змогу вчасно врятувати життя своїм побратимам або цивільнии людям. Життя може бути врятовано завдяки швидкій реакції санітара та аптечці під рукою.";
+   const about1 = "Since the beginning of the Russian invasion of Ukraine, our IBF team 'WE ARE THE ONLY ONE', together with volunteers and caring citizens, have been helping our military at the front.";
+    const about2 ="What exactly is included in aid to the military?";
+    const about3= "We are purchasing the necessary tactical military equipment for mobility and improving the combat operations of the Armed Forces of Ukraine. We are also purchasing sanitary and medical aid kits for the military.";
+    const about4= "Most often, the collection and purchase of equipment for mobility is carried out at the direct request of the military.";
+    const about5= "Pick-up car";
+    const about6= "Used for rapid military response; landing at points where combat missions are performed; evacuation of wounded and civilians; for covering military and civilian residents;";
+    const about7= "Van type cars";
+    const about8= "Most of all, they serve to evacuate the wounded; to deliver humanitarian aid to hot spots, to places where there is a humanitarian crisis, to cities and villages affected by the Russian invasion.";
+    const about9= "Purchasing Bugs";
+    const about10= "Thanks to this type of transport, Ukrainian defenders have a significant advantage over Russian opponents. By keeping mobile buggies in the units of the Armed Forces, our military is able to deliver ammunition to places inaccessible to other types of transport; forces effectively perform the assigned tasks, destroying the enemy once and for all.";
+    const about11= "Purchase of electric bikes";
+    const about12=  "Another type of transport, thanks to which the Ukrainian military can move silently and quickly towards the enemy, conducting successful maneuvers to destroy Russian killers and then disappear unnoticed. Electric bikes are another active advantage in the mobility of special military groups.";
+    const about13= "Purchase of quadcopters and unmanned aerial vehicles";
+    const about14= "At this moment, without this equipment, the tactics of any Ukrainian military unit is impossible, because for the sake of the security of the military, the territory of Ukraine is first checked for the presence of terrorists of the Russian army. Therefore, quadcopters and drones are of great importance in the direction of reconnaissance.";
+    const about15= "Purchase of medical equipment";
+    const about16= "Directly for conducting defensive or offensive combat operations, our defenders always need to have a first aid kit with them. Thanks to medical equipment, our soldiers are able to save the lives of their comrades or civilians in time. Lives can be saved thanks to the quick reaction of a paramedic and a first aid kit at hand. ";
 
    return (
     <Container maxW="1512px" px={"171px"} py={"30px"} textAlign={"left"}>
     <Box py={"70px"} textAlign={"left"} fontSize={font32} fontWeight={"bold"}>
-        {t('допомога армії та військовим україни')}
+        {t('Assistance to the army and military of Ukraine')}
     </Box>
     <Box>
         <VStack spacing={10}>

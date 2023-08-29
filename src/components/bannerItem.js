@@ -51,7 +51,7 @@ function BannerItem(){
                                     lineHeight="30px"
                                     letterSpacing="-0.3px"
                                      color={"#fff"}>
-                                    {t('МИ ЄДИНІ')}
+                                    {t('WE ARE THE ONLY ONE')}
                                 </Box>
                                 <Box textAlign={"left"} 
                                     marginTop={10}
@@ -60,13 +60,13 @@ function BannerItem(){
                                     fontWeight={500}
                                     lineHeight="35px"
                                      color={"#fff"}>
-                                    {t('Команда активних українців, які мають спільну мету - допомога українському народу у відбудові українських поселень та осель сімей, які втратили дах над головою від рук російського агресора.')}
+                                    {t('A team of active Ukrainians who have a common goal - to help the Ukrainian people in the reconstruction of Ukrainian settlements and homes of families who lost their roofs over their heads at the hands of the Russian aggressor.')}
                                 </Box>
                                 <Link as={RouterLink} to="/payment">
                                     <Box textAlign={"left" }>
                                         <Button backgroundColor="orange" alignItems="center" borderRadius={0}>
                                             <Box fontSize="20px" fontWeight={600} lineHeight="30px">
-                                                {t('допомогти')}
+                                                {t('HELP')}
                                             </Box>
                                         </Button>
                                     </Box>

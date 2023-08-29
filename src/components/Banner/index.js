@@ -92,7 +92,7 @@ function Navbar() {
                                     lineHeight="30px"
                                     letterSpacing="-0.3px"
                                      color={"#fff"}>
-                                    МИ ЄДИНІ          
+                                    WE ARE THE ONLY ONE          
                                 </Box>
                                 <Box textAlign={"left"} 
                                     marginTop={10}

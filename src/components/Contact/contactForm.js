@@ -50,11 +50,11 @@ function ContactForm( color, type) {
             </Center>
             <Box  px={"68px"} my={"20px"} >
                 <VStack textAlign={"right"} gap={"20px"}>
-                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('ім’я')}  />
-                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('номер телефону')}  />
+                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('name')}  />
+                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('phone number')}  />
                     <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('Email')}  />
-                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('У якому місті проживаєте?')}  />
-                    <Input pt={"33px"} pb={"134px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('Чим би могли і хотіли допомагати?')}  />    
+                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('What city do you live in?')}  />
+                    <Input pt={"33px"} pb={"134px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('How could and would you like to help?')}  />    
                 </VStack>
             </Box>
             <Center py={"20px"}>

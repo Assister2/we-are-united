@@ -64,20 +64,20 @@ function PayItem( color, type) {
                     fontWeight={600}
                     lineHeight="21px"
                     letterSpacing="-0.3px">
-                    {t('Платежі з-за кордону та по україні')}
+                    {t('Payments from abroad and in Ukraine')}
                 </Box>
                 <Box width={"559px"} borderWidth={1} borderRadius={0} paddingTop={"18px"} paddingBottom={"18px"} paddingLeft={"24px"} paddingRight={"24px"}>
                     <Box color={"red"} pt={3} pb={3}>
                         {t('UAH')} 
                     </Box>
                     <Box pt={3} pb={3}>              
-                    {t("БО 'МБФ МИ ЄДИНІ'")}
+                    {t("БО 'МБФ WE ARE THE ONLY ONE'")}
                     </Box>
                     <Box pt={3} pb={3}> 
-                        {t('ЄДРПОУ')}: 44890538
+                        {t('YEDRPOU')}: 44890538
                     </Box>
                     <Box pt={3} pb={3}>
-                        {t('Призначення платежу «Благодійна допомога»')}
+                        {t('Purpose of payment «Charitable assistance»')}
                     </Box>
                     <Box pt={3} pb={3}>
                         IBAN: UA053052990000026009016219566
@@ -94,7 +94,7 @@ function PayItem( color, type) {
                     lineHeight="21px"
                     letterSpacing="-0.3px"
                     >
-                    {t('swift перекази з-за кордону')} 
+                    {t('Swift transfers from abroad')} 
                 </Box>
                 <Box width={"559px"} borderWidth={1} borderRadius={0} paddingTop={"18px"} paddingBottom={"18px"} paddingLeft={"24px"} paddingRight={"24px"}>
                     <Box>
@@ -161,7 +161,7 @@ function PayItem( color, type) {
                     lineHeight="21px"
                     letterSpacing="-0.3px"
                     >
-                    {t('криптовалюта')}
+                    {t('Cryptocurrency')}
                 </Box>
                 <Box width={"559px"} borderWidth={1} borderRadius={0} paddingTop={"18px"} paddingBottom={"18px"} paddingLeft={"24px"} paddingRight={"24px"}>
                     <Box>
@@ -203,7 +203,7 @@ function PayItem( color, type) {
                     lineHeight="21px"
                     letterSpacing="-0.3px"
                     >
-                    {t('інформація про банк отримувача')} 
+                    {t("Recipient's bank information")} 
                 </Box>
                 <Box width={"559px"} fontSize={"20px"} fontWeight={600} lineHeight={"40px"} letterSpacing={"0.2px"} borderWidth={0} borderRadius={0} paddingTop={"18px"} paddingBottom={"18px"} paddingLeft={"24px"} paddingRight={"24px"}>
                     <Box  pt={3} pb={3}>
