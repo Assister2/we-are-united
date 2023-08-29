@@ -1,5 +1,6 @@
 import React ,{ useEffect, useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
+import {useTranslation} from "react-i18next";
 import axios from "axios";
 import {
   Container,
@@ -35,6 +36,7 @@ function FullItem({index}) {
     
     const cardBg = useColorModeValue("gray.50", "gray.900");
     const [detailData, setDetailData] = useState([]);
+    const {t, i18n} = useTranslation('common');
     useEffect(() => {
         const fetchData = async () => {
           try {
@@ -62,11 +64,11 @@ function FullItem({index}) {
             <Center py={"101px"} position={"relative"}>
                 <Box fontSize={{lg:'32px', md:'24px', sm:'20px', base:'16px'}}
                     fontWeight={700} lineHeight={"21px"} letterSpacing={"0.2px"}
-                    textTransform={"uppercase"}>Автомобілі</Box>
+                    textTransform={"uppercase"}>{detailData.records[index].fields.Name}</Box>
                 <Button bgColor="#FFE76A" borderRadius={"0px"}
                  position={"absolute"} right={"0px"}
                  px={"17px"} py={"13px"}>
-                    у процесі
+                    {t('In process')}
                 </Button>
             </Center>
             <Flex justify={"space-between"}>
@@ -74,7 +76,7 @@ function FullItem({index}) {
                     <Text textAlign={"left"} 
                     font-size={{lg:'24px', md:'20px', sm:'16px', base:'12px'}}
                     fontWeight={700} lineHeight={"21px"} letterSpacing={"0.2px"}
-                    textTransform={"uppercase"} mb={"18px"}>Опис проєкту</Text>
+                    textTransform={"uppercase"} mb={"18px"}>{t('PROJECT DESCRIPTION')}</Text>
                     <Box textAlign={"left"}  
                     color={"#000"} 
                     fontSize={{lg:'20px', md:'16px', sm:'12px', base:'10px'}}
@@ -92,13 +94,13 @@ function FullItem({index}) {
                             fontWeight={600} lineHeight={"30px"} letterSpacing={"0.2px"}
                             >
                             <Box py={"20px"} px={"58px"} borderWidth={1} borderRadius={0}>
-                                <Box textAlign={"center"}>зібрано</Box>
+                                <Box textAlign={"center"}>{t('Collected')}</Box>
                                 <Box color={"orange"}>
                                 {detailData.records[index].fields.Collected}
                                 </Box>
                             </Box>
                             <Box py={"20px"} px={"58px"} borderWidth={1} borderRadius={0}>
-                                <Box textAlign={"center"}>Потрібно</Box>
+                                <Box textAlign={"center"}>{t('Necessary')}</Box>
                                 <Box color={"orange"}>
                                 {detailData.records[index].fields.Required}
                                 </Box>
@@ -106,7 +108,7 @@ function FullItem({index}) {
                         </HStack>
                     </Box>
                     <Button backgroundColor="orange" fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderRadius={0}>
-                        допомогти
+                    {t('Help')}
                     </Button>
                 </Box>
                 <Box>
@@ -116,7 +118,7 @@ function FullItem({index}) {
             <Text textAlign={"left"} py={10}
                 font-size={{lg:'24px', md:'20px', sm:'16px', base:'12px'}}
                 fontWeight={700} lineHeight={"21px"} letterSpacing={"0.2px"}
-                textTransform={"uppercase"} mb={"18px"}>Наше звернення</Text>
+                textTransform={"uppercase"} mb={"18px"}>{t('OUR APPEAL')}</Text>
             <Box position={"relative"}>
                 <Image src="../../assets/safari1.png" alt="safari1" />
                 <Box zIndex={1} position={"absolute"} top={"26%"} left={"44%"}>
@@ -128,7 +130,7 @@ function FullItem({index}) {
             <Text textAlign={"left"} 
                 font-size={{lg:'24px', md:'20px', sm:'16px', base:'12px'}}
                 fontWeight={700} lineHeight={"21px"} letterSpacing={"0.2px"}
-                textTransform={"uppercase"} mb={"32px"} mt={"101px"}>фотозвіт</Text>
+                textTransform={"uppercase"} mb={"32px"} mt={"101px"}>{t('PHOTO REPORT')}</Text>
             <SimpleGrid columns={2} spacing={8}> 
                 <Box>
                     {/* <Image src="../../assets/image-4.png" alt='item1' /> */}
@@ -153,7 +155,7 @@ function FullItem({index}) {
             <Text textAlign={"left"} 
                 font-size={{lg:'24px', md:'20px', sm:'16px', base:'12px'}}
                 fontWeight={700} lineHeight={"21px"} letterSpacing={"0.2px"}
-                textTransform={"uppercase"} mb={"32px"} mt={"101px"}>Інформаційний звіт про виконану роботу</Text>       
+                textTransform={"uppercase"} mb={"32px"} mt={"101px"}>{t('INFORMATION REPORT ON WORK PERFORMED')}</Text>       
             <Box textAlign={"justify"} fontSize={{lg:'20px', md:'16px', sm:'12px', base:'10px'}} 
             fontWeight={600} lineHeight={"40px"} variant={"small-caps"} mb={"278px"} letterSpacing={"0.2px"}>
                 <Text mb={3}>

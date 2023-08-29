@@ -71,7 +71,7 @@ function PayItem( color, type) {
                         {t('UAH')} 
                     </Box>
                     <Box pt={3} pb={3}>              
-                    {t("БО 'МБФ WE ARE THE ONLY ONE'")}
+                    {t("BECAUSE 'MBF WE ARE THE ONLY ONE'")}
                     </Box>
                     <Box pt={3} pb={3}> 
                         {t('YEDRPOU')}: 44890538

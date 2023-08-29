@@ -42,16 +42,16 @@ function ContactForm( color, type) {
             </Box>
             <Center px={"78px"} mt={"78px"} mb={"18px"} fontSize={{lg:'30px', md:'24px', sm:'20px', base:'16px'}}
                 fontFamily={"Rutenia"} fontWeight={400} textAlign={"center"} lineHeight={10} >
-                {t('Щоб разом будувати майбутнє')}
+                {t('To build the future together')}
             </Center>
             <Center px={"78px"} mb={"48px"} mt={"18px"} fontSize={{lg:'30px', md:'24px', sm:'20px', base:'16px'}}
                 fontFamily={"Rutenia"} textAlign={"center"} fontWeight={400} lineHeight={10} >
-                {t('варто бути єдиними у спільній справі')}
+                {t('It is worth being united in a common cause')}
             </Center>
             <Box  px={"68px"} my={"20px"} >
                 <VStack textAlign={"right"} gap={"20px"}>
-                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('name')}  />
-                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('phone number')}  />
+                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('Name')}  />
+                    <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('Phone number')}  />
                     <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('Email')}  />
                     <Input py={"33px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('What city do you live in?')}  />
                     <Input pt={"33px"} pb={"134px"} pl={"30px"} borderColor={"#001430"} borderWidth={1} borderRadius={0} placeholder={t('How could and would you like to help?')}  />    
@@ -60,7 +60,7 @@ function ContactForm( color, type) {
             <Center py={"20px"}>
                 <Button backgroundColor="orange" alignItems="center" borderRadius={0}>
                     <Box fontSize="20px" fontWeight={600} lineHeight="30px">
-                        {t('надіслати')}
+                        {t('Send')}
                     </Box>
                 </Button>
             </Center> 

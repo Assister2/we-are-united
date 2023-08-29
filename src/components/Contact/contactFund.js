@@ -36,7 +36,7 @@ function ContactFund( color, type) {
             <Center fontSize={{lg:'32px', md:'24px', sm:'20px', base:'16px'}}
                 fontWeight={700} lineHeight={"21px"} letterSpacing={"0.2px"}
                 textTransform={"uppercase"} pb={"25px"}>
-                {t('Документи фонду')}
+                {t('DOCUMENTS OF THE FUND')}
             </Center>
             <Flex justify={"space-between"} py={"20px"}
              fontSize={{lg:'20px', md:'16px', sm:'12px', base:'8px'}}>
@@ -47,7 +47,7 @@ function ContactFund( color, type) {
                         </svg>
                     </Center>
                     <Text textAlign={"center"}>
-                        {t('Статут')}
+                        {t('Regulations')}
                     </Text>
                 </Box>
                 <Box width={"25%"}>
@@ -57,7 +57,7 @@ function ContactFund( color, type) {
                         </svg>
                     </Center>
                     <Text textAlign={"center"}>
-                        {t('Виписка з ЄДР')}
+                        {t('Extract from the EDR')}
                     </Text>
                 </Box>
                 <Box width={"20%"}>
@@ -67,7 +67,7 @@ function ContactFund( color, type) {
                         </svg>
                     </Center>
                     <Text textAlign={"center"}>
-                        {t('Протокол')}
+                        {t('Protocol')}
                     </Text>
                 </Box>
             </Flex>
