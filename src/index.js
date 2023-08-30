@@ -13,15 +13,16 @@ import common_de from "./translations/de/common.json";
 import common_fr from "./translations/fr/common.json";
 import common_es from "./translations/es/common.json";
 import common_it from "./translations/it/common.json";
+import common_ua from "./translations/ua/common.json";
 
 const root = createRoot(document.getElementById("root"));
 i18next.init({
   interpolation: { escapeValue: false },  // React already does escaping
-  lng: 'ua',                              // language to use
+  lng: 'en',                              // language to use
     resources: {
-        en: {
-          common: common_en               // 'common' is our custom namespace
-        },
+        // en: {
+        //   common: common_en               // 'common' is our custom namespace
+        // },
         de: {
           common: common_de
         },
@@ -33,6 +34,9 @@ i18next.init({
         },
         it: {
           common: common_it
+        },
+        ua: {
+          common: common_ua
         }
     },
 });

@@ -51,6 +51,7 @@ function Navbar() {
     // }
      i18n.changeLanguage(item);
     setSelectedItem(item.toUpperCase());
+    console.log("LANGUAGE", item, item.toUpperCase());
   };
   return (
     <chakra.header bg="#f2f6fa" w="100%" fontFamily="Montserrat">

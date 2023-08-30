@@ -22,10 +22,12 @@ const routes = [
   {
     path: "/",
     page: <Home />,
+    // title: 'Homepage',
   },
   {
     path: "/about",
     page: <About />,
+    // title: 'About Us',
   },
   {
     path: "/about/:id",
@@ -34,30 +36,37 @@ const routes = [
   {
     path: "/detail/:id",
     page: <Detail id/>,
+    // title: 'Detail',
   },
   {
     path: "/directions",
     page: <Directions />,
+    // title: 'Direction'
   },
   {
     path: "/meeting",
     page: <Meeting />,
+    // title: 'Meeting',
   },
   {
     path: "/contacts",
     page: <Contacts />,
+    // title: 'Contacts',
   },
   {
     path: "/help",
     page: <Help />,
+    // title: 'Help'
   },
   {
     path: "/payment",
     page: <Payment />,
+    // title: 'Payment',
   },
   {
     path: "/detail",
     page: <Detail />,
+    // title: 'Detail',
   },
 ];
 
