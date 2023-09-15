@@ -190,7 +190,7 @@ function Direction() {
                                 <Link as={RouterLink} to="/detail/1">
                                 
                                 <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
-                                    {t('In detailо')}
+                                    {t('In detail')}
                                 </Button>
                                 </Link>
                                 </Flex>
