@@ -1,7 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, useHistory } from "react-router-dom";
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react";
 import axios from "axios";
 import App from "App";
@@ -20,9 +20,9 @@ i18next.init({
   interpolation: { escapeValue: false },  // React already does escaping
   lng: 'en',                              // language to use
     resources: {
-        // en: {
-        //   common: common_en               // 'common' is our custom namespace
-        // },
+        en: {
+          common: common_en               // 'common' is our custom namespace
+        },
         de: {
           common: common_de
         },

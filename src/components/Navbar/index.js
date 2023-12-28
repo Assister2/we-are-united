@@ -1,5 +1,5 @@
 import React ,{useState,useEffect} from "react";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import { HashLink } from 'react-router-hash-link';
 import {
   Container,
@@ -33,6 +33,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import {useTranslation} from "react-i18next";
+import { useLocation } from "react-router-dom";
 import "./navbar.css";
 import ColorModeToggle from "components/ColorModeToggle";
 import Logo from "assets/react-logo.svg";
@@ -44,14 +45,71 @@ function Navbar() {
   const isMobile = useBreakpointValue({ base: true, md: false });
   const {t, i18n} = useTranslation('common');
   const [selectedItem, setSelectedItem] = useState(null);
+  const [currentLang, setCurrentLang] = useState(null);
   // const { locale } = useContext(LocaleContext);
-  const handleMenuItemClick = (item) => {
-    // if(locale == item){
-    //   i18n.changeLanguage(item);
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  useEffect(() => {
+    let a = location.pathname;
+    // debugger
+    let code = a.split('/')[1];
+    console.log("LEFT",code, a);
+    let newPath;
+    if(code != 'es' && code != 'fr' && code != 'de' && code != 'it' && code != 'ua' && code != 'en'){
+      
+      if( a == '/'){
+        code ='/en';
+        navigate(`${code}/home`);
+      }
+      // else{
+      //   code ='/en';
+      //   navigate(`${code}${a}`);
+      // }
+      else{
+        navigate(`${currentLang}/${code}`);
+      }
+      console.log("RIGHT",code, a);
+    }
+    else{
+      console.log("IS LEFT",code, a);
+      code = `/${code}`;
+
+    }
+    setCurrentLang(code);
+
+  }, [location]);
+  console.log("currentLang----------------", currentLang)
+  const handleMenuItemClick = (lang) => {
+    // if(locale == lang){
+    //   i18n.changeLanguage(lang);
     // }
-     i18n.changeLanguage(item);
-    setSelectedItem(item.toUpperCase());
-    console.log("LANGUAGE", item, item.toUpperCase());
+    let a = location.pathname;
+    let code = a.split('/')[1];
+    let newPath;
+    if(code == 'ua' || code == 'es' || code == 'de' || code == 'fr' || code == 'it' || code == 'en')
+    {
+      if(lang == 'ua' || lang == 'es' || lang == 'de' || lang == 'fr' || lang == 'it' || lang == 'en'){
+
+        newPath = a.replace(`${code}`, `${lang}`);
+        // navigate(`/${lang}${location.pathname}`); 
+      }
+      else{
+
+        newPath = a.replace(`/${code}`, ``);
+        // console.log("ADSSADASDASDASDS", lang, a, newPath)
+      }
+    }
+    else{
+      // console.log("WANTED", code)
+      if(lang == 'ua' || lang == 'es' || lang == 'de' || lang == 'fr' || lang == 'it' || lang == 'en'){
+        newPath= `/${lang}${location.pathname}`;
+      }
+    }
+    navigate(newPath);
+    i18n.changeLanguage(lang);
+    setSelectedItem(lang.toUpperCase());
+    console.log("LANGUAGE", lang, lang.toUpperCase());
   };
   return (
     <chakra.header bg="#f2f6fa" w="100%" fontFamily="Montserrat">
@@ -78,7 +136,7 @@ function Navbar() {
                             напрямки
                           </Box>
                         </Link> */}
-                        <HashLink to="/directions#direction" 
+                        <HashLink to={`/${currentLang}/directions#direction`} 
                         scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}>
                           <Box fontSize="16px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
                             {t('DIRECTIONS')}
@@ -120,7 +178,7 @@ function Navbar() {
                     напрямки
                   </Box>
                 </Link> */}
-                <HashLink to="/directions#direction" class="hover_action_hashlink"
+                <HashLink to={`/directions#direction`} class="hover_action_hashlink"
                 scroll={(el) => el.scrollIntoView({ behavior: 'smooth' })}>
                   <Box fontSize="24px" fontWeight={600} lineHeight="10px" textTransform={"uppercase"} letterSpacing="0.2px">
                     {t('DIRECTIONS')}

@@ -80,7 +80,7 @@ function Direction() {
       }, []);
 
     return (
-        
+        <>
         <chakra.body bg={bg}  maxWidth="1512px" fontFamily={"Montserrat"} color="#001430">
             <Container maxW="1170px"
                         py={5}
@@ -196,6 +196,34 @@ function Direction() {
                                 </Flex>
                             </Box>
                         </Box>
+                        {/* {tempDirectionItem.map(i)=>{
+                            <Box bg={cardBg}>
+                                <Box width={"100%"} height={"320px"}>
+                                    <Image src="../../assets/direction004.png" alt='item4' />
+                                </Box>
+                                <Box pl={16} pr={16}>
+                                    <Box textAlign={"left"}
+                                        marginBottom={3}
+                                        fontSize={{lg:'32px', md:'28px', base:'24px', sm:'24px'}}>
+                                        {t("'Night'thermal imagers")}
+                                    </Box>
+                                    <Flex justify={"space-between"} marginTop={4} marginBottom={4}>
+                                    <Link as={RouterLink} to="/payment">
+                                    
+                                    <Button backgroundColor="orange" fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderRadius={0}>
+                                        {t('Help')}
+                                    </Button>
+                                    </Link>
+                                    <Link as={RouterLink} to="/detail/1">
+                                    
+                                    <Button backgroundColor="white"  fontSize={{lg:'20px', md:'12px', sm:'8px', base:'6px'}} alignItems="center" borderWidth={1} borderColor={"black"} borderRadius={0}>
+                                        {t('In detail')}
+                                    </Button>
+                                    </Link>
+                                    </Flex>
+                                </Box>
+                            </Box>
+                        }} */}
                      </SimpleGrid>
                 </Box>
                 <Box  textAlign={"left"} 
@@ -353,6 +381,7 @@ function Direction() {
                 </Box>
             </Container>
         </chakra.body>
+        </>
     );
 }
 

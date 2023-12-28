@@ -10,6 +10,7 @@ const Help = lazy(() => import("pages/Help"));
 const Payment = lazy(() => import("pages/Payment"));
 const Detail = lazy(() => import("pages/Detail"));
 
+
 const routes = [
   {
     path: "*",
@@ -18,11 +19,6 @@ const routes = [
   {
     path: "/404",
     page: <NotFound />,
-  },
-  {
-    path: "/",
-    page: <Home />,
-    // title: 'Homepage',
   },
   {
     path: "/about",
@@ -67,6 +63,11 @@ const routes = [
     path: "/detail",
     page: <Detail />,
     // title: 'Detail',
+  },
+  {
+    path: "/home",
+    page: <Home />,
+    // title: 'Homepage',
   },
 ];
 

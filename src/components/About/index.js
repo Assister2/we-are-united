@@ -103,7 +103,7 @@ function About() {
                     px={{lg:'200px', md:'150px', sm:'120px', base:'120px'}}
                     fontSize={{lg:'20px', md:'20px', sm:'16px', base:'12px'}}>
                     <Center paddingBottom={5} fontWeight={700} lineHeight="21px" letterSpacing="0.2px" textTransform={"uppercase"} >
-                        {t('Areas of our activity')}
+                        {t('AREAS OF OUR ACTIVITY')}
                     </Center>
                     <SimpleGrid columns={2} spacing={8} fontWeight={600} lineHeight="30px">
                         <Link as={RouterLink} to="/about/1"> 
